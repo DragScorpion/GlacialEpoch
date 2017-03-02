@@ -1,0 +1,28 @@
+!SESSION 2017-03-02 20:47:56.853 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product -data M:\GitHub\GlacialEpoch\GlacialEpoch\eclipse -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-02 20:48:03.752
+!MESSAGE Warnung: Die Umgebungsvariable HOME ist nicht gesetzt. Das folgende Verzeichnis wird verwendet, um die globale Konfiguration der Git-
+Benutzer zu speichern und um die Standardposition zu definieren, in dem Projektarchive gespeichert werden: 'C:\Users\DragScorpion'. Falls dies nicht das gewünschte
+Verzeichnis ist, setzen Sie die HOME-Umgebungsvariable und starten Sie Eclipse erneut. Andernfalls könnte sich Git für Windows und
+EGit unterschiedlich verhalten, da sie unterschiedliche Konfigurationsoptionen verwenden.
+Sie können diese Warnung in den Benutzervorgaben deaktivieren: Team > Git > Bestätigungen und Warnungen.
+!SESSION 2017-03-02 20:57:28.477 -----------------------------------------------
+eclipse.buildId=4.6.2.M20161124-1400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product -data M:\GitHub\GlacialEpoch\GlacialEpoch\eclipse -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2017-03-02 20:57:34.935
+!MESSAGE Warnung: Die Umgebungsvariable HOME ist nicht gesetzt. Das folgende Verzeichnis wird verwendet, um die globale Konfiguration der Git-
+Benutzer zu speichern und um die Standardposition zu definieren, in dem Projektarchive gespeichert werden: 'C:\Users\DragScorpion'. Falls dies nicht das gewünschte
+Verzeichnis ist, setzen Sie die HOME-Umgebungsvariable und starten Sie Eclipse erneut. Andernfalls könnte sich Git für Windows und
+EGit unterschiedlich verhalten, da sie unterschiedliche Konfigurationsoptionen verwenden.
+Sie können diese Warnung in den Benutzervorgaben deaktivieren: Team > Git > Bestätigungen und Warnungen.
