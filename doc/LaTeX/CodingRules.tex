@@ -1,0 +1,52 @@
+\documentclass{scrartcl}
+
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{nameref}
+\usepackage{underscore}
+
+\title{Coding Rules}
+\author{Hendrik Wagemann}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Einleitung}
+\label{introduction}
+Wir sind zwar nur eine kleine Gruppe, dennoch sollte es ein paar kleine Regelungen geben.
+
+\section{Regeln}
+\label{rules}
+
+\subsection{Namensgebung}
+\label{rules_naming}
+Alle hier angegebenen Namensregels sind erstmal nur Vorschläge von mir, Hendrik.
+Alle Namen auf Englisch
+\begin{table}
+	\begin{tabular}{ l | l | l }
+		\textbf{Typ} & \textbf{Namensgebung} & \textbf{Beispiel} \\ 
+		\hline
+		Dateien & UpperCamelCase mit Präfix ''GE_'' & GE_BaseItem \\ 
+		public, not nested classes (''Normale'' Klassen) & gleich dem Dateinamen & GE_BaseItem \\ 
+		sonstige Klassen &	UpperCamelCase & DasIstEinKlassenName \\ 
+		Methoden & lowerCamelCase & dasIstEineMethode \\ 
+		Variablen & lowerCamelCase & dasIstEineVariable \\ 
+	\end{tabular}
+	\label{rules_naming_table1}
+	\caption{Namensgebung bei Dateien, Klassen, Methoden und Variablen}
+\end{table}
+\begin{table}
+	\begin{tabular}{ l | l }
+		Minecraft Items & Präfix ''item'' \\ 
+		Minecraft Blöcke & Präfix ''block'' \\ 
+	\end{tabular}
+	\label{rules_naming_table2}
+	\caption{Sonderfälle bei speziellen Variablen}
+\end{table}
+\end{document}
