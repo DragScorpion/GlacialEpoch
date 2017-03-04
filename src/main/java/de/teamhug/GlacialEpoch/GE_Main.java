@@ -13,8 +13,8 @@ import de.teamhug.GlacialEpoch.Proxy.GE_CommonProxy;
 @Mod(modid = GE_Main.MODID, version = GE_Main.VERSION, name = GE_Main.NAME)
 public class GE_Main
 {
-    public static final String MODID = "glacialepochmod";
-    public static final String NAME = "GlacialEpochMod";
+    public static final String MODID = "glacialepoch";
+    public static final String NAME = "GlacialEpoch";
     public static final String VERSION = "0.0";
 
     @Mod.Instance(value = MODID)
