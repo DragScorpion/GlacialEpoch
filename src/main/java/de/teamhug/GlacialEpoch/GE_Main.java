@@ -5,9 +5,7 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import de.teamhug.GlacialEpoch.Proxy.GE_Common_Proxy;
-import de.teamhug.GlacialEpoch.Registry.GE_Blocks;
-import de.teamhug.GlacialEpoch.Registry.GE_Items;
+import de.teamhug.GlacialEpoch.Proxy.GE_CommonProxy;
 
 /**
  * GlacialEpoch.git, Created by Henny on 03.03.2017.
@@ -22,25 +20,24 @@ public class GE_Main
     @Mod.Instance(value = MODID)
     public static GE_Main instance;
 
-    @SidedProxy(clientSide = "de.teamhug.GlacialEpoch.Proxy.GE_Client_Proxy", serverSide = "de.teamhug.GlacialEpoch.Proxy.GE_Common_Proxy")
-    public static GE_Common_Proxy proxy;
+    @SidedProxy(clientSide = "de.teamhug.GlacialEpoch.Proxy.GE_ClientProxy", serverSide = "de.teamhug.GlacialEpoch.Proxy.GE_ServerProxy")
+    public static GE_CommonProxy proxy;
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        GE_Items.registerItems();
-        GE_Blocks.registerBlocks();
+        proxy.preInit(event);
     }
 
     @Mod.EventHandler
-    public void load(FMLInitializationEvent event)
+    public void init(FMLInitializationEvent event)
     {
-
+        proxy.init(event);
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
-
+        proxy.postInit(event);
     }
 }
