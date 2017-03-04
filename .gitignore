@@ -3,3 +3,7 @@
 /build/**
 /classes/**
 /eclipse/**
+/.classpath
+/.project
+/bin/**
+/.settings/**
