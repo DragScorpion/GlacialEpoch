@@ -11,7 +11,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class GE_GUICampFire extends GuiContainer {
 	
-	public final ResourceLocation texture = new ResourceLocation(GE_Main.MODID, "textures/gui/campFire.png");
+	public final ResourceLocation texture = new ResourceLocation(GE_Main.MODID, "textures/gui/GE_guiCampFire.png");
 	public final GE_TileEntityCampFire tileEntity;
 	
 	public GE_GUICampFire(InventoryPlayer inventory, GE_TileEntityCampFire te) {
