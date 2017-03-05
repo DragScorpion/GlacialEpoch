@@ -5,3 +5,6 @@ tile.GE_blockDummyBlock.name=Dummy Block
 
 itemGroup.GE_Items=Glacial Epoch Items
 itemGroup.GE_Blocks=Glacial Epoch Blöcke
+
+itemGroup.GE_tabItems=GE Items
+itemGroup.GE_tsbBlocks= GE Blocks
