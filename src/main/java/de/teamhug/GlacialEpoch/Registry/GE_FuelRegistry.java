@@ -22,10 +22,8 @@ public class GE_FuelRegistry implements IFuelHandler
         Item fuelItem = fuel.getItem();
         Block fuelBlock = Block.getBlockFromItem(fuel.getItem());
         
-        System.out.println("Call");
         if(fuelBlock == GE_BlockRegistry.blockDeadWood)
         {
-            System.out.println("Statment");
             return 200;
         }
         if (fuelItem == GE_ItemRegistry.itemDummyItem2)
