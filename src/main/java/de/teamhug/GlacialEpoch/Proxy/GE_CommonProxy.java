@@ -3,6 +3,7 @@ package de.teamhug.GlacialEpoch.Proxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
+import cpw.mods.fml.common.registry.GameRegistry;
 import de.teamhug.GlacialEpoch.Registry.GE_BlockRegistry;
 import de.teamhug.GlacialEpoch.Registry.GE_FuelRegistry;
 import de.teamhug.GlacialEpoch.Registry.GE_ItemRegistry;
@@ -19,7 +20,11 @@ public class GE_CommonProxy
         GE_ItemRegistry.registerItems();
         GE_BlockRegistry.registerBlocks();
         GE_FuelRegistry.registerFuels();
+<<<<<<< HEAD
         MinecraftForge.EVENT_BUS.register(new GE_MobDropsHandler());
+=======
+        
+>>>>>>> origin/master
     }
 
     public void init(FMLInitializationEvent event)
