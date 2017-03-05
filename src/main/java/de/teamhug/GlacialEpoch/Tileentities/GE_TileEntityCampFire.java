@@ -25,7 +25,7 @@ import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityFurnace;
 
-public class GE_TileentityCampFire extends TileEntity implements IInventory {
+public class GE_TileEntityCampFire extends TileEntity implements IInventory {
 	
 	private ItemStack[] inventory = new ItemStack[3];
     /** The number of ticks that the furnace will keep burning */
@@ -35,7 +35,7 @@ public class GE_TileentityCampFire extends TileEntity implements IInventory {
     /** The number of ticks that the current item has been cooking for */
     public int cookTime;
 	
-	public GE_TileentityCampFire() {
+	public GE_TileEntityCampFire() {
 		inventory = new ItemStack[this.getSizeInventory()];
 	}
 	
@@ -86,7 +86,7 @@ public class GE_TileentityCampFire extends TileEntity implements IInventory {
                 if (this.isBurning() && this.canSmelt()) {
                     ++this.cookTime;
                     
-                    //Brenn Zeit erhöhen
+                    //Brenn Zeit erhï¿½hen
                     if (this.cookTime == 200) {
                         this.cookTime = 0;
                         this.smeltItem();
