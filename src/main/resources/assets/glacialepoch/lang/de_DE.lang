@@ -1,7 +1,7 @@
 //--- Items
 item.GE_itemDummyItem1.name=Dummy Item 1
 item.GE_itemDummyItem2.name=Dummy Item 2
-item.GE_itemKadaverCow.name=Kuhkadaver
+item.GE_itemCadaverCow.name=Kuhkadaver
 
 //--- Blocks
 tile.GE_blockDummyBlock.name=Dummy Block
