@@ -12,6 +12,7 @@ public class GE_Blocks
 {
     public static Block blockDummyBlock;
     public static Block blockDummyBlockNexon;
+    public static Block blockDummyBlockRohr;
 
     public static void registerBlocks()
     {
@@ -20,5 +21,8 @@ public class GE_Blocks
         
         blockDummyBlockNexon = new GE_Block("GE_blockDummyBlockNexon", Material.rock);
         GameRegistry.registerBlock(blockDummyBlockNexon, "GE_blockDummyBlockNexon");
+        
+        blockDummyBlockRohr = new GE_Block("GE_blockDummyBlockRohr", Material.rock);
+        GameRegistry.registerBlock(blockDummyBlockRohr, "GE_blockDummyBlockRohr");
     }
 }
