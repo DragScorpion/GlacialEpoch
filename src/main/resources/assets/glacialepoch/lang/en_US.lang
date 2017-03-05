@@ -1,10 +1,10 @@
+//--- Items
 item.GE_itemDummyItem1.name=Dummy Item 1
 item.GE_itemDummyItem2.name=Dummy Item 2
 
+//--- Blocks
 tile.GE_blockDummyBlock.name=Dummy Block
 
-itemGroup.GE_Items=Glacial Epoch Items
-itemGroup.GE_Blocks=Glacial Epoch Blocks
-
+//--- Tabs
 itemGroup.GE_tabItems=GE Items
 itemGroup.GE_tabBlocks= GE Blocks
