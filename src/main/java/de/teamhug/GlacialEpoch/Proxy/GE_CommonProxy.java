@@ -20,11 +20,8 @@ public class GE_CommonProxy
         GE_ItemRegistry.registerItems();
         GE_BlockRegistry.registerBlocks();
         GE_FuelRegistry.registerFuels();
-<<<<<<< HEAD
         MinecraftForge.EVENT_BUS.register(new GE_MobDropsHandler());
-=======
-        
->>>>>>> origin/master
+
     }
 
     public void init(FMLInitializationEvent event)
