@@ -11,7 +11,7 @@ public class GE_ItemRegistry
 {
     public static Item itemDummyItem1;
     public static Item itemDummyItem2;
-    public static Item itemKadaverCow;
+    public static Item itemCadaverCow;
 
     public static void registerItems()
     {   
@@ -28,6 +28,12 @@ public class GE_ItemRegistry
         itemDummyItem2.setMaxStackSize(16);
         GameRegistry.registerItem(itemDummyItem2, "GE_itemDummyItem2");
         
+<<<<<<< HEAD
 
+=======
+        itemCadaverCow = new GE_Item("GE_itemCadaverCow");
+        itemCadaverCow.setMaxStackSize(64);
+        GameRegistry.registerItem(itemCadaverCow, "GE_itemCadaverCow");
+>>>>>>> branch 'master' of https://github.com/DragScorpion/GlacialEpoch.git
     }
 }
