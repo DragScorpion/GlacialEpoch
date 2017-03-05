@@ -8,7 +8,7 @@ import net.minecraft.block.material.Material;
 /**
  * GlacialEpoch.git, Created by Henny on 03.03.2017.
  */
-public class GE_Blocks
+public class GE_Blocks_Registry
 {
     public static Block blockDummyBlock;
     public static Block blockDummyBlockNexon;

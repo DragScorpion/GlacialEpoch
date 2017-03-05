@@ -7,7 +7,7 @@ import net.minecraft.item.Item;
 /**
  * GlacialEpoch.git, Created by Henny on 03.03.2017.
  */
-public class GE_Items
+public class GE_Items_Registry
 {
     public static Item itemDummyItem1;
     public static Item itemDummyItem2;
