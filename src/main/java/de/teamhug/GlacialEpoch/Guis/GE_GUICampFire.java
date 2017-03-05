@@ -4,19 +4,17 @@ import org.lwjgl.opengl.GL11;
 
 import de.teamhug.GlacialEpoch.GE_Main;
 import de.teamhug.GlacialEpoch.Container.GE_ContainerCampFire;
-import de.teamhug.GlacialEpoch.Tileentities.GE_TileentityCampFire;
-import net.minecraft.client.Minecraft;
+import de.teamhug.GlacialEpoch.TileEntities.GE_TileEntityCampFire;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.Container;
 import net.minecraft.util.ResourceLocation;
 
 public class GE_GUICampFire extends GuiContainer {
 	
 	public final ResourceLocation texture = new ResourceLocation(GE_Main.MODID, "textures/gui/campFire.png");
-	public final GE_TileentityCampFire tileEntity;
+	public final GE_TileEntityCampFire tileEntity;
 	
-	public GE_GUICampFire(InventoryPlayer inventory, GE_TileentityCampFire te) {
+	public GE_GUICampFire(InventoryPlayer inventory, GE_TileEntityCampFire te) {
 		super(new GE_ContainerCampFire(inventory, te));
 		this.tileEntity = te;
 	}

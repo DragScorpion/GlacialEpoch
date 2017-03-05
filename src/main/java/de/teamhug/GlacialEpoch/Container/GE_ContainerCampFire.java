@@ -2,13 +2,12 @@ package de.teamhug.GlacialEpoch.Container;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
-import de.teamhug.GlacialEpoch.Tileentities.GE_TileentityCampFire;
+import de.teamhug.GlacialEpoch.TileEntities.GE_TileEntityCampFire;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.ICrafting;
 import net.minecraft.inventory.Slot;
-import net.minecraft.inventory.SlotFurnace;
 import net.minecraft.item.ItemStack;
 
 public class GE_ContainerCampFire extends Container {
@@ -20,16 +19,16 @@ public class GE_ContainerCampFire extends Container {
 	private int INVMAIN = INVBAR+9;
 	private int INVEND = INVMAIN+27;
 	
-	private GE_TileentityCampFire tileEntity;
+	private GE_TileEntityCampFire tileEntity;
 	private int lastCookTime;
     private int lastBurnTime;
     private int lastItemBurnTime;
 	
-	public GE_ContainerCampFire(InventoryPlayer inventory, GE_TileentityCampFire te) {
+	public GE_ContainerCampFire(InventoryPlayer inventory, GE_TileEntityCampFire te) {
 		this.tileEntity = te;
         this.addSlotToContainer(new Slot(te, 0, 56, 17));
         this.addSlotToContainer(new Slot(te, 1, 56, 53));
-        this.addSlotToContainer(new GE_OutputSlot(te, 2, 116, 35));
+        this.addSlotToContainer(new GE_SlotOutput(te, 2, 116, 35));
         
         for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 9; j++) {

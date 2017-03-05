@@ -4,9 +4,9 @@ import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
-public class GE_OutputSlot extends Slot {
+public class GE_SlotOutput extends Slot {
 
-	public GE_OutputSlot(IInventory inventory, int slot, int x, int y) {
+	public GE_SlotOutput(IInventory inventory, int slot, int x, int y) {
 		super(inventory, slot, x, y);
 	}
 	

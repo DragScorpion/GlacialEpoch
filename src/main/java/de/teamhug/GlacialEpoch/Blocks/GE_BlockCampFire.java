@@ -3,7 +3,7 @@ package de.teamhug.GlacialEpoch.Blocks;
 import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
 import de.teamhug.GlacialEpoch.GE_Main;
 import de.teamhug.GlacialEpoch.Registry.GE_GUIRegistry;
-import de.teamhug.GlacialEpoch.Tileentities.GE_TileentityCampFire;
+import de.teamhug.GlacialEpoch.TileEntities.GE_TileEntityCampFire;
 import de.teamhug.GlacialEpoch.Util.GE_CreativeTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
@@ -31,7 +31,7 @@ public class GE_BlockCampFire extends BlockContainer {
 
 	@Override
 	public TileEntity createNewTileEntity(World world, int meta) {
-		return new GE_TileentityCampFire();
+		return new GE_TileEntityCampFire();
 	}
 	
 	@Override
@@ -41,7 +41,7 @@ public class GE_BlockCampFire extends BlockContainer {
 	
 	@Override
 	public void breakBlock(World world, int xCoord, int yCoord, int zCoord, Block block, int state) {
-		GE_TileentityCampFire te = (GE_TileentityCampFire)world.getTileEntity(xCoord, yCoord, zCoord);
+		GE_TileEntityCampFire te = (GE_TileEntityCampFire)world.getTileEntity(xCoord, yCoord, zCoord);
 		float motion = 0.7F;
 		double motionX = (world.rand.nextFloat() * motion) + (1.0F - motion) * 0.5D;
 		double motionY = (world.rand.nextFloat() * motion) + (1.0F - motion) * 0.5D;

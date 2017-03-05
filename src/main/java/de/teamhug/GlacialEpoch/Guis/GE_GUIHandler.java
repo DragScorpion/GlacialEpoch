@@ -3,7 +3,7 @@ package de.teamhug.GlacialEpoch.Guis;
 import cpw.mods.fml.common.network.IGuiHandler;
 import de.teamhug.GlacialEpoch.Container.GE_ContainerCampFire;
 import de.teamhug.GlacialEpoch.Registry.GE_GUIRegistry;
-import de.teamhug.GlacialEpoch.Tileentities.GE_TileentityCampFire;
+import de.teamhug.GlacialEpoch.TileEntities.GE_TileEntityCampFire;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
@@ -17,9 +17,9 @@ public class GE_GUIHandler implements IGuiHandler {
 		switch(ID) {
 		case GE_GUIRegistry.guiCampFire:
 			//System.out.println("Test Container 1");
-			if (te instanceof GE_TileentityCampFire) {
+			if (te instanceof GE_TileEntityCampFire) {
 				//System.out.println("Test Container 2");
-				return new GE_ContainerCampFire(player.inventory, (GE_TileentityCampFire)te);
+				return new GE_ContainerCampFire(player.inventory, (GE_TileEntityCampFire)te);
 			}
 			break;
 		}
@@ -33,9 +33,9 @@ public class GE_GUIHandler implements IGuiHandler {
 		switch(ID) {
 		case GE_GUIRegistry.guiCampFire:
 			//System.out.println("Test GUI 1");
-			if (te instanceof GE_TileentityCampFire) {
+			if (te instanceof GE_TileEntityCampFire) {
 				//System.out.println("Test GUI 2");
-				return new GE_GUICampFire(player.inventory, (GE_TileentityCampFire)te);
+				return new GE_GUICampFire(player.inventory, (GE_TileEntityCampFire)te);
 			}
 			break;
 		}

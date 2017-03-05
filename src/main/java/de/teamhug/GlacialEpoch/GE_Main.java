@@ -15,7 +15,7 @@ public class GE_Main
 {
     public static final String MODID = "glacialepoch";
     public static final String NAME = "GlacialEpoch";
-    public static final String VERSION = "0.0";
+    public static final String VERSION = "0.0.0";
 
     @Mod.Instance(value = MODID)
     public static GE_Main instance;

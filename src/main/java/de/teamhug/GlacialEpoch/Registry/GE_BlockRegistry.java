@@ -13,9 +13,6 @@ import net.minecraft.block.material.Material;
 public class GE_BlockRegistry
 {
     public static Block blockDummyBlock;
-    public static Block blockDummyBlockNexon;
-    public static Block blockDummyBlockRohr;
-    public static Block blockDummyBlockDrag;
 
     public static Block blockDeadWood;
     public static Block blockDeadWoodFrozen;
