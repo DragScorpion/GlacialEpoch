@@ -1,0 +1,6 @@
+1. Grass ausschalten in der Welt
+
+2. Erze in der Welt hinzufügen (Custom Ore Gen)
+
+3. Blöcke / Items im OreDict hinterlegen
+
