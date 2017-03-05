@@ -21,7 +21,17 @@ public class GE_BlockRegistry
 
     public static void registerBlocks()
     {
-        blockDummyBlock = new GE_Block("GE_blockDummyBlock", Material.rock);
+        
+    	// Dead Wood
+        blockDeadWood = new GE_BlockDeadWood("GE_blockDeadWood", Material.wood);
+        GameRegistry.registerBlock(blockDeadWood, "GE_blockDeadWood");
+
+        blockDeadWoodFrozen = new GE_BlockDeadWood("GE_blockDeadWoodFrozen", Material.ice);
+        GameRegistry.registerBlock(blockDeadWoodFrozen, "GE_blockDeadWoodFrozen");
+    	
+    	
+    	// Dummy 
+    	blockDummyBlock = new GE_Block("GE_blockDummyBlock", Material.rock);
         GameRegistry.registerBlock(blockDummyBlock, "GE_blockDummyBlock");
         
         blockDummyBlockNexon = new GE_Block("GE_blockDummyBlockNexon", Material.rock);
@@ -30,12 +40,6 @@ public class GE_BlockRegistry
         blockDummyBlockRohr = new GE_Block("GE_blockDummyBlockRohr", Material.rock);
         GameRegistry.registerBlock(blockDummyBlockRohr, "GE_blockDummyBlockRohr");
 
-        blockDeadWood = new GE_BlockDeadWood("GE_blockDeadWood", Material.wood);
-        GameRegistry.registerBlock(blockDeadWood, "GE_blockDeadWood");
-
-        blockDeadWoodFrozen = new GE_BlockDeadWood("GE_blockDeadWoodFrozen", Material.ice);
-        GameRegistry.registerBlock(blockDeadWoodFrozen, "GE_blockDeadWoodFrozen");
-        
         blockDummyBlockDrag = new GE_Block("GE_blockDummyBlockDrag", Material.rock);
         GameRegistry.registerBlock(blockDummyBlockDrag, "GE_blockDummyBlockDrag");
     }
