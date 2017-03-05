@@ -12,6 +12,9 @@ public class GE_ItemRegistry
     //Cadaver
 	public static Item itemCadaverCow;
 	
+	//Tools
+	public static Item itemHidesCutter;
+
 	//CastingForms
 	public static Item itemCastingFormArrowHead;
 	public static Item itemCastingFormAxeHead;
@@ -46,6 +49,11 @@ public class GE_ItemRegistry
         itemCadaverCow = new GE_Item("GE_itemCadaverCow");
         itemCadaverCow.setMaxStackSize(64);
         GameRegistry.registerItem(itemCadaverCow, "GE_itemCadaverCow");
+        
+        //Tools
+        itemHidesCutter = new GE_Item("GE_itemHidesCutter");
+        itemHidesCutter.setMaxStackSize(1);
+        GameRegistry.registerItem(itemHidesCutter, "GE_itemHidesCutter");
         
         //CastingForms
     	itemCastingFormArrowHead = new GE_Item("GE_itemCastingFormArrowHead");
