@@ -14,7 +14,13 @@ public class GE_ItemRegistry
     public static Item itemKadaverCow;
 
     public static void registerItems()
-    {
+    {   
+        //Kadaver
+        itemKadaverCow = new GE_Item("GE_itemKadaverCow");
+        itemKadaverCow.setMaxStackSize(64);
+        GameRegistry.registerItem(itemKadaverCow, "GE_itemKadaverCow");
+        
+    	//Dummy
         itemDummyItem1 = new GE_Item("GE_itemDummyItem1");
         GameRegistry.registerItem(itemDummyItem1, "GE_itemDummyItem1");
 
@@ -22,8 +28,6 @@ public class GE_ItemRegistry
         itemDummyItem2.setMaxStackSize(16);
         GameRegistry.registerItem(itemDummyItem2, "GE_itemDummyItem2");
         
-        itemKadaverCow = new GE_Item("GE_itemKadaverCow");
-        itemKadaverCow.setMaxStackSize(64);
-        GameRegistry.registerItem(itemKadaverCow, "GE_itemKadaverCow");
+
     }
 }
