@@ -26,7 +26,7 @@ public class GE_BlockRegistry
     {
         
     	// Dead Wood
-        blockDeadWood = new GE_BlockDeadWood("GE_blockDeadWood", Material.wood);
+        blockDeadWood = new GE_BlockDeadWood("GE_blockDeadWood", Material.rock);
         GameRegistry.registerBlock(blockDeadWood, "GE_blockDeadWood");
 
         blockDeadWoodFrozen = new GE_BlockDeadWood("GE_blockDeadWoodFrozen", Material.ice);
