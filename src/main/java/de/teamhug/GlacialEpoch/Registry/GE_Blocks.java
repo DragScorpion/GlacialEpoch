@@ -11,10 +11,14 @@ import net.minecraft.block.material.Material;
 public class GE_Blocks
 {
     public static Block blockDummyBlock;
+    public static Block blockDummyBlockNexon;
 
     public static void registerBlocks()
     {
         blockDummyBlock = new GE_Block("GE_blockDummyBlock", Material.rock);
         GameRegistry.registerBlock(blockDummyBlock, "GE_blockDummyBlock");
+        
+        blockDummyBlockNexon = new GE_Block("GE_blockDummyBlockNexon", Material.rock);
+        GameRegistry.registerBlock(blockDummyBlockNexon, "GE_blockDummyBlockNexon");
     }
 }
