@@ -1,7 +1,7 @@
 package de.teamhug.GlacialEpoch.Util;
 
-import de.teamhug.GlacialEpoch.Registry.GE_Blocks_Registry;
-import de.teamhug.GlacialEpoch.Registry.GE_Items_Registry;
+import de.teamhug.GlacialEpoch.Registry.GE_BlockRegistry;
+import de.teamhug.GlacialEpoch.Registry.GE_ItemRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
@@ -15,7 +15,7 @@ public class GE_CreativeTabs
         @Override
         public Item getTabIconItem()
         {
-            return GE_Items_Registry.itemDummyItem1;
+            return GE_ItemRegistry.itemDummyItem1;
         }
     };
 
@@ -24,7 +24,7 @@ public class GE_CreativeTabs
         @Override
         public Item getTabIconItem()
         {
-            return Item.getItemFromBlock(GE_Blocks_Registry.blockDummyBlock);
+            return Item.getItemFromBlock(GE_BlockRegistry.blockDummyBlock);
         }
     };
 }

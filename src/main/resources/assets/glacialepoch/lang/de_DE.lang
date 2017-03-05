@@ -6,6 +6,8 @@ item.GE_itemKadaverCow.name=Kuhkadaver
 //--- Blocks
 tile.GE_blockDummyBlock.name=Dummy Block
 
+itemGroup.GE_tabItems=Glacial Epoch Items
+itemGroup.GE_tabBlocks=Glacial Epoch Blöcke
 //--- Tabs
 itemGroup.GE_tabItems=GE Gegenstände
 itemGroup.GE_tsbBlocks=GE Blöcke
