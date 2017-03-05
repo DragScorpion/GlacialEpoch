@@ -33,14 +33,6 @@ public class GE_BlockRegistry
     	// Dummy 
     	blockDummyBlock = new GE_Block("GE_blockDummyBlock", Material.rock);
         GameRegistry.registerBlock(blockDummyBlock, "GE_blockDummyBlock");
-        
-        blockDummyBlockNexon = new GE_Block("GE_blockDummyBlockNexon", Material.rock);
-        GameRegistry.registerBlock(blockDummyBlockNexon, "GE_blockDummyBlockNexon");
-        
-        blockDummyBlockRohr = new GE_Block("GE_blockDummyBlockRohr", Material.rock);
-        GameRegistry.registerBlock(blockDummyBlockRohr, "GE_blockDummyBlockRohr");
 
-        blockDummyBlockDrag = new GE_Block("GE_blockDummyBlockDrag", Material.rock);
-        GameRegistry.registerBlock(blockDummyBlockDrag, "GE_blockDummyBlockDrag");
     }
 }
