@@ -27,4 +27,13 @@ public class GE_CreativeTabs
             return Item.getItemFromBlock(GE_BlockRegistry.blockDummyBlock);
         }
     };
+    
+    public static final CreativeTabs tabGEButcher = new CreativeTabs("GE_tabButcher")
+    {
+        @Override
+        public Item getTabIconItem()
+        {
+            return GE_ItemRegistry.itemHidesCutter;
+        }
+    };
 }

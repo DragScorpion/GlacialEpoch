@@ -2,6 +2,7 @@ package de.teamhug.GlacialEpoch.Registry;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import de.teamhug.GlacialEpoch.Items.GE_Item;
+import de.teamhug.GlacialEpoch.Util.GE_CreativeTabs;
 import net.minecraft.item.Item;
 
 /**
@@ -75,16 +76,19 @@ public class GE_ItemRegistry
         //Cadaver
         itemCadaverCow = new GE_Item("GE_itemCadaverCow");
         itemCadaverCow.setMaxStackSize(64);
+        itemCadaverCow.setCreativeTab(GE_CreativeTabs.tabGEButcher);
         GameRegistry.registerItem(itemCadaverCow, "GE_itemCadaverCow");
         
 
         //Tools
         itemHidesCutter = new GE_Item("GE_itemHidesCutter");
         itemHidesCutter.setMaxStackSize(1);
+        itemHidesCutter.setCreativeTab(GE_CreativeTabs.tabGEButcher);
         GameRegistry.registerItem(itemHidesCutter, "GE_itemHidesCutter");
         
         itemCuttingKnife = new GE_Item("GE_itemCuttingKnife");
         itemCuttingKnife.setMaxStackSize(1);
+        itemCuttingKnife.setCreativeTab(GE_CreativeTabs.tabGEButcher);
         GameRegistry.registerItem(itemCuttingKnife, "GE_itemCuttingKnife");
 
         //BurnedForms
