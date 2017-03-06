@@ -7,7 +7,7 @@ import de.teamhug.GlacialEpoch.Util.GE_ButcherRecipe;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
-public abstract class GE_ButcherRecipes {
+public class GE_ButcherRecipes {
 	
 	public static ArrayList<GE_ButcherRecipe> recipes = new ArrayList<GE_ButcherRecipe>();
 	
@@ -21,8 +21,8 @@ public abstract class GE_ButcherRecipes {
 		addRecipe(new GE_ButcherRecipe()
 				.setInput(new ItemStack(GE_ItemRegistry.itemCadaverCow))
 				.setTools(tools)
-				.addOutput(new ItemStack(Items.leather))
-				.addOutput(new ItemStack(Items.beef, 1, 6)));
+				.addOutput(new ItemStack(Items.leather, 1, 1))
+				.addOutput(new ItemStack(Items.beef, 6, 1)));
 	}
 	
 	public static void addRecipe(GE_ButcherRecipe recipe) {

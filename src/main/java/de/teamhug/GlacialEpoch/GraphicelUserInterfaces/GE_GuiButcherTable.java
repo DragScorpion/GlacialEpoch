@@ -26,16 +26,20 @@ public class GE_GuiButcherTable extends GuiContainer {
 	protected void drawGuiContainerBackgroundLayer(float p_146976_1_, int p_146976_2_, int p_146976_3_) {
 		GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
         this.mc.getTextureManager().bindTexture(texture);
+        this.xSize = 250;
+        this.ySize = 196;
         int k = (this.width - this.xSize) / 2;
         int l = (this.height - this.ySize) / 2;
-        this.drawTexturedModalRect(k, l, 0, 0, this.xSize, this.ySize);
+        this.guiLeft = k;
+        this.guiTop = l;
+        this.drawTexturedModalRect(k,l, 0, 0, this.xSize, this.ySize);
         
         if (this.tileEntity.isBurning())
         {
             int i1 = this.tileEntity.getBurnTimeRemainingScaled(13);
-            this.drawTexturedModalRect(k + 56, l + 36 + 12 - i1, 176, 12 - i1, 14, i1 + 1);
-            i1 = this.tileEntity.getCookProgressScaled(24);
-            this.drawTexturedModalRect(k + 79, l + 34, 176, 14, i1 + 1, 16);
+            this.drawTexturedModalRect(k + 107, l + 65 + 12 - i1, 243, 256 - i1, 14, i1 + 1);
+            i1 = this.tileEntity.getCookProgressScaled(31);
+            this.drawTexturedModalRect(k + 109, l + 36, 0, 237, i1 + 1, 19);
         }
 		
 	}

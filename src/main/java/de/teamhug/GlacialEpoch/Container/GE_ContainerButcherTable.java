@@ -31,26 +31,26 @@ public class GE_ContainerButcherTable extends Container {
     	
     	for (int i = 0; i < 3; i++) {
     		for (int j = 0; j < 3; j++) {
-    			this.addSlotToContainer(new Slot(te, j+i*3, 10, 10));
+    			this.addSlotToContainer(new Slot(te, j+i*3, 26+18*j, 28+18*i));
     		}
     	}
     	for (int i = 0; i < 3; i++) {
     		for (int j = 0; j < 3; j++) {
-    			this.addSlotToContainer(new GE_SlotOutput(te, j+i*3+OUTPUT, 10, 10));
+    			this.addSlotToContainer(new GE_SlotOutput(te, j+i*3+OUTPUT, 170+18*j, 28+18*i));
     		}
     	}
     	for (int i = 0; i < 5; i++) {
-    		this.addSlotToContainer(new Slot(te, i+TOOL, 10, 10));
+    		this.addSlotToContainer(new Slot(te, i+TOOL, 62+18*i, 90));
     	}
-    	this.addSlotToContainer(new Slot(te, FUEL, 10, 10));
+    	this.addSlotToContainer(new Slot(te, FUEL, 122, 63));
     	
     	for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 9; j++) {
-				this.addSlotToContainer(new Slot(inventory, i*9+j+9, 8+18*j, 84+18*i));
+				this.addSlotToContainer(new Slot(inventory, i*9+j+9, 43+18*j, 115+18*i));
 			}
 		}
 		for (int i = 0; i < 9; i++) {
-			this.addSlotToContainer(new Slot(inventory, i, 8+18*i, 142));
+			this.addSlotToContainer(new Slot(inventory, i, 43+18*i, 173));
 		}
     	
     }
