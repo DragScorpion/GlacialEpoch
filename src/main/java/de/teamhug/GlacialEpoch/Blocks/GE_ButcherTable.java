@@ -2,7 +2,7 @@ package de.teamhug.GlacialEpoch.Blocks;
 
 import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
 import de.teamhug.GlacialEpoch.GE_Main;
-import de.teamhug.GlacialEpoch.Registry.GE_GUIRegistry;
+import de.teamhug.GlacialEpoch.Registry.GE_GuiRegistry;
 import de.teamhug.GlacialEpoch.TileEntities.GE_TileEntityButcherTable;
 import de.teamhug.GlacialEpoch.TileEntities.GE_TileEntityCampFire;
 import de.teamhug.GlacialEpoch.Util.GE_CreativeTabs;
@@ -53,7 +53,7 @@ public class GE_ButcherTable extends BlockContainer {
 		@Override
 		public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
 			if (!world.isRemote) {
-				FMLNetworkHandler.openGui(player, GE_Main.instance, GE_GUIRegistry.guiButcherTable, world, x, y, z);
+				FMLNetworkHandler.openGui(player, GE_Main.instance, GE_GuiRegistry.guiButcherTable, world, x, y, z);
 			}
 			return true;
 		}
