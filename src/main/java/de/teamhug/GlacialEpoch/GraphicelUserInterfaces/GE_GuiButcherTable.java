@@ -1,27 +1,25 @@
-package de.teamhug.GlacialEpoch.Guis;
+package de.teamhug.GlacialEpoch.GraphicelUserInterfaces;
 
 import org.lwjgl.opengl.GL11;
 
 import de.teamhug.GlacialEpoch.GE_Main;
+import de.teamhug.GlacialEpoch.Container.GE_ContainerButcherTable;
 import de.teamhug.GlacialEpoch.Container.GE_ContainerCampFire;
+import de.teamhug.GlacialEpoch.TileEntities.GE_TileEntityButcherTable;
 import de.teamhug.GlacialEpoch.TileEntities.GE_TileEntityCampFire;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.inventory.Container;
 import net.minecraft.util.ResourceLocation;
 
-public class GE_GUICampFire extends GuiContainer {
+public class GE_GuiButcherTable extends GuiContainer {
 	
-	public final ResourceLocation texture = new ResourceLocation(GE_Main.MODID, "textures/gui/GE_guiCampFire.png");
-	public final GE_TileEntityCampFire tileEntity;
+	public final ResourceLocation texture = new ResourceLocation(GE_Main.MODID, "textures/gui/GE_guiButcherTable.png");
+	public final GE_TileEntityButcherTable tileEntity;
 	
-	public GE_GUICampFire(InventoryPlayer inventory, GE_TileEntityCampFire te) {
-		super(new GE_ContainerCampFire(inventory, te));
+	public GE_GuiButcherTable(InventoryPlayer inventory, GE_TileEntityButcherTable te) {
+		super(new GE_ContainerButcherTable(inventory, te));
 		this.tileEntity = te;
-	}
-	
-	@Override
-	protected void drawGuiContainerForegroundLayer(int p_146979_1_, int p_146979_2_) {
-		
 	}
 
 	@Override
@@ -39,6 +37,7 @@ public class GE_GUICampFire extends GuiContainer {
             i1 = this.tileEntity.getCookProgressScaled(24);
             this.drawTexturedModalRect(k + 79, l + 34, 176, 14, i1 + 1, 16);
         }
+		
 	}
-
+	
 }

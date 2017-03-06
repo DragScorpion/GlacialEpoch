@@ -2,6 +2,7 @@ package de.teamhug.GlacialEpoch.Registry;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import de.teamhug.GlacialEpoch.Blocks.GE_Block;
+import de.teamhug.GlacialEpoch.Blocks.GE_BlockButcherTable;
 import de.teamhug.GlacialEpoch.Blocks.GE_BlockCampFire;
 import de.teamhug.GlacialEpoch.Blocks.GE_BlockDeadWood;
 import net.minecraft.block.Block;
@@ -18,6 +19,7 @@ public class GE_BlockRegistry
     public static Block blockDeadWoodFrozen;
     
     public static Block blockCampFire;
+    public static Block blockButcherTable;
 
     public static void registerBlocks()
     {
@@ -32,6 +34,9 @@ public class GE_BlockRegistry
         // TileEntities Blocks
         blockCampFire = new  GE_BlockCampFire("GE_BlockCampFire", Material.rock);
         GameRegistry.registerBlock(blockCampFire, "GE_BlockCampFire");
+        
+        blockButcherTable = new GE_BlockButcherTable("GE_BlockButcherTable", Material.rock);
+        GameRegistry.registerBlock(blockButcherTable, "GE_BlockButcherTable");
     	
     	// Dummy 
     	blockDummyBlock = new GE_Block("GE_blockDummyBlock", Material.rock);
