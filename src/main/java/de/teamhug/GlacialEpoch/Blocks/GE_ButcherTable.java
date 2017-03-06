@@ -14,7 +14,7 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
 import net.minecraft.block.BlockContainer;
 
-public class GE_ButcherTable extands BlockContainer {
+public class GE_ButcherTable extends BlockContainer {
 	
 		public GE_ButcherTable(String unlocalizedName, Material material)
 	    {
