@@ -58,5 +58,3 @@ public class GE_ButcherTable extends BlockContainer {
 			return true;
 		}
 	}
-		
-}
