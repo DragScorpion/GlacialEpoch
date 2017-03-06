@@ -3,6 +3,7 @@ item.GE_itemDummyItem1.name=Dummy Item 1
 item.GE_itemDummyItem2.name=Dummy Item 2
 item.GE_itemCadaverCow.name=Cow catcass
 item.GE_itemHidesCutter.name=Hides cutter
+item.GE_itemCuttingKnife.name=Cutting knife
 
 //--- Blocks
 tile.GE_blockDummyBlock.name=Dummy Block

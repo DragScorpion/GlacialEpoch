@@ -14,6 +14,8 @@ public class GE_ItemRegistry
 	
 	//Tools
 	public static Item itemHidesCutter;
+	public static Item itemCuttingKnife;
+
 
 	//BurnedForms
 	public static Item itemBurnedFormArrowHead;
@@ -80,6 +82,10 @@ public class GE_ItemRegistry
         itemHidesCutter = new GE_Item("GE_itemHidesCutter");
         itemHidesCutter.setMaxStackSize(1);
         GameRegistry.registerItem(itemHidesCutter, "GE_itemHidesCutter");
+        
+        itemCuttingKnife = new GE_Item("GE_itemCuttingKnife");
+        itemCuttingKnife.setMaxStackSize(1);
+        GameRegistry.registerItem(itemCuttingKnife, "GE_itemCuttingKnife");
 
         //BurnedForms
     	itemBurnedFormArrowHead = new GE_Item("GE_itemBurnedFormArrowHead");
