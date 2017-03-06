@@ -16,12 +16,12 @@ public class GE_ShapedRecipes
                 			"BF ",
                 			"SB ",
 			/*Material*/    'F', Items.flint, 'B', Items.string, 'S', Items.stick);
-        
+    
         GameRegistry.addRecipe(new ItemStack(GE_ItemRegistry.itemCuttingKnife),
-             /*Recipe*/      "F  ",
-                    		 " FB",
-                    		 " BS",
-             /*Material*/    'F', Items.flint, 'B', Items.string, 'S', Items.stick);
+             /*Recipe*/      "D  ",
+                    		 " DB",
+                    		 "  S",
+             /*Material*/    'D', Items.flint, 'B', Items.string, 'S', Items.stick);
 
     }
 
