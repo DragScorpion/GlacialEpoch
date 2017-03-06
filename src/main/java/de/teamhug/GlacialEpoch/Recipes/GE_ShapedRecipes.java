@@ -22,6 +22,12 @@ public class GE_ShapedRecipes
                     		 " DB",
                     		 "  S",
              /*Material*/    'D', Items.flint, 'B', Items.string, 'S', Items.stick);
+        
+        GameRegistry.addRecipe(new ItemStack(Items.leather),
+             /*Recipe*/      "DK ",
+                       		 "   ",
+                       		 "   ",
+             /*Material*/    'D', GE_ItemRegistry.itemCadaverCow, 'K', GE_ItemRegistry.itemHidesCutter);
 
     }
 
