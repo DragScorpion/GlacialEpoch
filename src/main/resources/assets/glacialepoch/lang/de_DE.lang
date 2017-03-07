@@ -4,6 +4,7 @@ item.GE_itemDummyItem2.name=Dummy Item 2
 item.GE_itemCadaverCow.name=Kuhkadaver
 item.GE_itemHidesCutter.name=Haeutemesser
 item.GE_itemCuttingKnife.name=Stechmesser
+item.GE_itemPrimitiveTool.name=Primitives Werkzeug
 
 //--- Blocks
 tile.GE_blockDummyBlock.name=Dummy Block
