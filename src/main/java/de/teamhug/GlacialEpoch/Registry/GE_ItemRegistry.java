@@ -12,6 +12,9 @@ public class GE_ItemRegistry
 {
     //Cadaver
 	public static Item itemCadaverCow;
+	public static Item itemBovine_half; //Rinderhälfte
+	public static Item itemBovine_skin; //Rinderhaut
+	public static Item itemCowHead; 	//Kuhkopf
 	
 	//Tools
 	public static Item itemHidesCutter;
@@ -74,11 +77,26 @@ public class GE_ItemRegistry
     
     public static void registerItems()
     {   
-        //Cadaver
+        //Cow
         itemCadaverCow = new GE_Item("GE_itemCadaverCow");
         itemCadaverCow.setMaxStackSize(64);
         itemCadaverCow.setCreativeTab(GE_CreativeTabs.tabGEButcher);
         GameRegistry.registerItem(itemCadaverCow, "GE_itemCadaverCow");
+        
+        itemBovine_half = new GE_Item("GE_itemBovine_half");
+        itemBovine_half.setMaxStackSize(64);
+        itemBovine_half.setCreativeTab(GE_CreativeTabs.tabGEButcher);
+        GameRegistry.registerItem(itemBovine_half, "itemBovine_half");
+        
+        itemBovine_skin = new GE_Item("GE_itemBovine_skin");
+        itemBovine_skin.setMaxStackSize(64);
+        itemBovine_skin.setCreativeTab(GE_CreativeTabs.tabGEButcher);
+        GameRegistry.registerItem(itemBovine_skin, "itemBovine_skin");
+        
+        itemCowHead = new GE_Item("GE_itemCowHead");
+        itemCowHead.setMaxStackSize(64);
+        itemCowHead.setCreativeTab(GE_CreativeTabs.tabGEButcher);
+        GameRegistry.registerItem(itemCowHead, "itemCowHead");
         
 
         //Tools
