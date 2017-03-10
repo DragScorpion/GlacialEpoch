@@ -26,7 +26,6 @@ public class GE_ButcherRecipes {
 		addRecipe(new GE_ButcherRecipe()
 				.setInput(new ItemStack(GE_ItemRegistry.itemCadaverCow))
 				.setTools(tools)
-				.setTools(water)
 				.addOutput(new ItemStack(GE_ItemRegistry.itemBovine_half, 2, 1))
 				.addOutput(new ItemStack(GE_ItemRegistry.itemBovine_skin, 1, 1))
 				.addOutput(new ItemStack(GE_ItemRegistry.itemCowHead, 1, 1))
