@@ -4,10 +4,15 @@ item.GE_itemDummyItem2.name=Dummy Item 2
 item.GE_itemCadaverCow.name=Cow catcass
 item.GE_itemHidesCutter.name=Hides cutter
 item.GE_itemCuttingKnife.name=Cutting knife
+item.GE_itemBovine_half.name=Bovine half
+item.GE_itemBovine_skin.name=Bovine skin
+item.GE_itemCowHead.name=Cow Head
+item.GE_itemSlaughteringAx.name=Slaughtering Ax
 item.GE_itemPrimitiveTool.name=Primitive Tool
 
 //--- Blocks
 tile.GE_blockDummyBlock.name=Dummy Block
+tile.GE_BlockButcherTable.name=Butcher Table
 
 //--- Tabs
 itemGroup.GE_tabItems=GE Items
