@@ -21,6 +21,7 @@ public class GE_ButcherRecipes {
 		
 		tools.add(new ItemStack(GE_ItemRegistry.itemHidesCutter));
 		tools.add(new ItemStack(GE_ItemRegistry.itemCuttingKnife));
+		tools.add(new ItemStack(Items.water_bucket));
 		water.add(new ItemStack(Items.water_bucket));
 		
 		addRecipe(new GE_ButcherRecipe()
