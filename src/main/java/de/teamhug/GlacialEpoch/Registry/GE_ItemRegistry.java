@@ -10,12 +10,19 @@ import net.minecraft.item.Item;
  */
 public class GE_ItemRegistry
 {
-    //Cadaver
-	public static Item itemCadaverCow;
-	
-	//Tools
+    //Butcher
+	public static Item itemCadaverCow;		//Kuhkörper
+	public static Item itemBovine_half; 	//Rinderhälfte
+	public static Item itemBovine_skin; 	//Rinderhaut
+	public static Item itemCowHead; 		//Kuhkopf
+	public static Item itemSlaughteringAx; 	//Schlachterbeil
+
+	//ButcherTools
 	public static Item itemHidesCutter;
 	public static Item itemCuttingKnife;
+	
+	
+	//Tools
 	public static Item itemPrimitiveTool;
 
 
@@ -26,7 +33,7 @@ public class GE_ItemRegistry
 	public static Item itemBurnedFormBroadaxeHead;
 	public static Item itemBurnedFormChiselHead;
 	public static Item itemBurnedFormCrossbar;
-	public static Item itemBurnedFormExcavator;
+	public static Item itemBurnedFormExcavatorHead;
 	public static Item itemBurnedFormFullGuard;
 	public static Item itemBurnedFormHammerHead;
 	public static Item itemBurnedFormIngot;
@@ -42,6 +49,11 @@ public class GE_ItemRegistry
 	public static Item itemBurnedFormSwordBlade;
 	public static Item itemBurnedFormToolBinding;
 	public static Item itemBurnedFormToughBinding;	
+	public static Item itemBurnedFormWideGuard;
+	public static Item itemBurnedFormHandGuard;
+	public static Item itemBurnedFormToughRod;
+	public static Item itemBurnedFormGem;
+	public static Item itemBurnedFormCasing;
 	
 
 	//CastingForms
@@ -74,14 +86,29 @@ public class GE_ItemRegistry
     
     public static void registerItems()
     {   
-        //Cadaver
+        //Cow
         itemCadaverCow = new GE_Item("GE_itemCadaverCow");
         itemCadaverCow.setMaxStackSize(64);
         itemCadaverCow.setCreativeTab(GE_CreativeTabs.tabGEButcher);
         GameRegistry.registerItem(itemCadaverCow, "GE_itemCadaverCow");
         
+        itemBovine_half = new GE_Item("GE_itemBovine_half");
+        itemBovine_half.setMaxStackSize(64);
+        itemBovine_half.setCreativeTab(GE_CreativeTabs.tabGEButcher);
+        GameRegistry.registerItem(itemBovine_half, "itemBovine_half");
+        
+        itemBovine_skin = new GE_Item("GE_itemBovine_skin");
+        itemBovine_skin.setMaxStackSize(64);
+        itemBovine_skin.setCreativeTab(GE_CreativeTabs.tabGEButcher);
+        GameRegistry.registerItem(itemBovine_skin, "itemBovine_skin");
+        
+        itemCowHead = new GE_Item("GE_itemCowHead");
+        itemCowHead.setMaxStackSize(64);
+        itemCowHead.setCreativeTab(GE_CreativeTabs.tabGEButcher);
+        GameRegistry.registerItem(itemCowHead, "itemCowHead");
+        
 
-        //Tools
+        //ButcherTools
         itemHidesCutter = new GE_Item("GE_itemHidesCutter");
         itemHidesCutter.setMaxStackSize(1);
         itemHidesCutter.setCreativeTab(GE_CreativeTabs.tabGEButcher);
@@ -92,6 +119,13 @@ public class GE_ItemRegistry
         itemCuttingKnife.setCreativeTab(GE_CreativeTabs.tabGEButcher);
         GameRegistry.registerItem(itemCuttingKnife, "GE_itemCuttingKnife");
         
+        itemSlaughteringAx = new GE_Item("GE_itemSlaughteringAx");
+        itemSlaughteringAx.setMaxStackSize(1);
+        itemSlaughteringAx.setCreativeTab(GE_CreativeTabs.tabGEButcher);
+        GameRegistry.registerItem(itemSlaughteringAx, "GE_itemSlaughteringAx");        
+
+        
+        //Tools
         itemPrimitiveTool = new GE_Item("GE_itemPrimitiveTool");
         itemPrimitiveTool.setMaxStackSize(1);
         GameRegistry.registerItem(itemPrimitiveTool, "GE_itemPrimitiveTool");
@@ -122,9 +156,9 @@ public class GE_ItemRegistry
         itemBurnedFormCrossbar.setMaxStackSize(1);
         GameRegistry.registerItem(itemBurnedFormCrossbar, "GE_itemBurnedFormCrossbar");
         
-        itemBurnedFormExcavator = new GE_Item("GE_itemBurnedFormExcavator");
-        itemBurnedFormExcavator.setMaxStackSize(1);
-        GameRegistry.registerItem(itemBurnedFormExcavator, "GE_itemBurnedFormExcavator");
+        itemBurnedFormExcavatorHead = new GE_Item("GE_itemBurnedFormExcavatorHead");
+        itemBurnedFormExcavatorHead.setMaxStackSize(1);
+        GameRegistry.registerItem(itemBurnedFormExcavatorHead, "GE_itemBurnedFormExcavatorHead");
         
         itemBurnedFormFullGuard = new GE_Item("GE_itemBurnedFormFullGuard");
         itemBurnedFormFullGuard.setMaxStackSize(1);
@@ -185,6 +219,26 @@ public class GE_ItemRegistry
         itemBurnedFormToughBinding = new GE_Item("GE_itemBurnedFormToughBinding");
         itemBurnedFormToughBinding.setMaxStackSize(1);
         GameRegistry.registerItem(itemBurnedFormToughBinding, "GE_itemBurnedFormToughBinding");
+        
+        itemBurnedFormWideGuard = new GE_Item("GE_itemBurnedFormWideGuard");
+		itemBurnedFormWideGuard.setMaxStackSize(1);
+        GameRegistry.registerItem(itemBurnedFormWideGuard, "GE_itemBurnedFormWideGuard");
+        
+        itemBurnedFormHandGuard = new GE_Item("GE_itemBurnedFormHandGuard");
+		itemBurnedFormHandGuard.setMaxStackSize(1);
+        GameRegistry.registerItem(itemBurnedFormHandGuard, "GE_itemBurnedFormHandGuard");
+        
+        itemBurnedFormToughRod = new GE_Item("GE_itemBurnedFormToughRod");
+		itemBurnedFormToughRod.setMaxStackSize(1);
+        GameRegistry.registerItem(itemBurnedFormToughRod, "GE_itemBurnedFormToughRod");
+        
+        itemBurnedFormGem = new GE_Item("GE_itemBurnedFormGem");
+		itemBurnedFormGem.setMaxStackSize(1);
+        GameRegistry.registerItem(itemBurnedFormGem, "GE_itemBurnedFormGem");
+        
+        itemBurnedFormCasing = new GE_Item("GE_itemCastingFormCasing");
+		itemBurnedFormCasing.setMaxStackSize(1);
+        GameRegistry.registerItem(itemBurnedFormCasing, "GE_itemCastingFormCasing");
         
         //CastingForms
     	itemCastingFormArrowHead = new GE_Item("GE_itemCastingFormArrowHead");
