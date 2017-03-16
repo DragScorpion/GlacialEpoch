@@ -10,15 +10,18 @@ import net.minecraft.item.Item;
  */
 public class GE_ItemRegistry
 {
-    //Cadaver
-	public static Item itemCadaverCow;
-	public static Item itemBovine_half; //Rinderhälfte
-	public static Item itemBovine_skin; //Rinderhaut
-	public static Item itemCowHead; 	//Kuhkopf
-	
-	//Tools
+    //ButcherItem
+	public static Item itemCadaverCow;		//Kuhkörper
+	public static Item itemBovine_half; 	//Rinderhälfte
+	public static Item itemBovine_skin; 	//Rinderhaut
+	public static Item itemCowHead; 		//Kuhkopf
+	public static Item itemSlaughteringAx; 	//Schlachterbeil
+
+	//ButcherTools
 	public static Item itemHidesCutter;
 	public static Item itemCuttingKnife;
+	
+	//Tools
 	public static Item itemPrimitiveTool;
 
 
@@ -99,7 +102,7 @@ public class GE_ItemRegistry
         GameRegistry.registerItem(itemCowHead, "itemCowHead");
         
 
-        //Tools
+        //ButcherTools
         itemHidesCutter = new GE_Item("GE_itemHidesCutter");
         itemHidesCutter.setMaxStackSize(1);
         itemHidesCutter.setCreativeTab(GE_CreativeTabs.tabGEButcher);
@@ -110,10 +113,16 @@ public class GE_ItemRegistry
         itemCuttingKnife.setCreativeTab(GE_CreativeTabs.tabGEButcher);
         GameRegistry.registerItem(itemCuttingKnife, "GE_itemCuttingKnife");
         
+        itemSlaughteringAx = new GE_Item("GE_itemSlaughteringAx");
+        itemSlaughteringAx.setMaxStackSize(1);
+        itemSlaughteringAx.setCreativeTab(GE_CreativeTabs.tabGEButcher);
+        GameRegistry.registerItem(itemSlaughteringAx, "GE_itemSlaughteringAx");
+        
+        //Tools
+        
         itemPrimitiveTool = new GE_Item("GE_itemPrimitiveTool");
         itemPrimitiveTool.setMaxStackSize(1);
         GameRegistry.registerItem(itemPrimitiveTool, "GE_itemPrimitiveTool");
-
         
         //BurnedForms
     	itemBurnedFormArrowHead = new GE_Item("GE_itemBurnedFormArrowHead");
