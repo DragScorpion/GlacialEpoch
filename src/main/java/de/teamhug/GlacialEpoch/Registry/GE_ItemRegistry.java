@@ -57,30 +57,31 @@ public class GE_ItemRegistry
 	public static Item itemBurnedFormGem;
 	public static Item itemBurnedFormCasing;
 	
-
-	//CastingForms
-	public static Item itemCastingFormArrowHead;
-	public static Item itemCastingFormAxeHead;
-	public static Item itemCastingFormBoard;
-	public static Item itemCastingFormBroadaxeHead;
-	public static Item itemCastingFormChiselHead;
-	public static Item itemCastingFormCrossbar;
-	public static Item itemCastingFormExcavator;
-	public static Item itemCastingFormFullGuard;
-	public static Item itemCastingFormHammerHead;
-	public static Item itemCastingFormIngot;
-	public static Item itemCastingFormKnifeBlade;
-	public static Item itemCastingFormLargeBlade;
-	public static Item itemCastingFormNugget;
-	public static Item itemCastingFormPan;
-	public static Item itemCastingFormPickaxeHead;
-	public static Item itemCastingFormPlate;
-	public static Item itemCastingFormRod;
-	public static Item itemCastingFormScytheHead;
-	public static Item itemCastingFormShovelHead;
-	public static Item itemCastingFormSwordBlade;
-	public static Item itemCastingFormToolBinding;
-	public static Item itemCastingFormToughBinding;
+	
+	//Forms
+	public static Item itemFormableClay;
+	public static Item itemFormArrowHead;
+	public static Item itemFormAxeHead;
+	public static Item itemFormBoard;
+	public static Item itemFormBroadaxeHead;
+	public static Item itemFormChiselHead;
+	public static Item itemFormCrossbar;
+	public static Item itemFormExcavator;
+	public static Item itemFormFullGuard;
+	public static Item itemFormHammerHead;
+	public static Item itemFormIngot;
+	public static Item itemFormKnifeBlade;
+	public static Item itemFormLargeBlade;
+	public static Item itemFormNugget;
+	public static Item itemFormPan;
+	public static Item itemFormPickaxeHead;
+	public static Item itemFormPlate;
+	public static Item itemFormRod;
+	public static Item itemFormScytheHead;
+	public static Item itemFormShovelHead;
+	public static Item itemFormSwordBlade;
+	public static Item itemFormToolBinding;
+	public static Item itemFormToughBinding;
 	
 	//Dummy
 	public static Item itemDummyItem1;
@@ -244,94 +245,97 @@ public class GE_ItemRegistry
         GameRegistry.registerItem(itemBurnedFormCasing, "GE_itemCastingFormCasing");
 
         
-        //CastingForms
-    	itemCastingFormArrowHead = new GE_Item("GE_itemCastingFormArrowHead");
-    	itemCastingFormArrowHead.setMaxStackSize(1);
-        GameRegistry.registerItem(itemCastingFormArrowHead, "GE_itemCastingFormArrowHead");
+        //Forms
+    	itemFormableClay = new GE_Item("GE_itemFormableClay");
+        GameRegistry.registerItem(itemFormableClay, "GE_itemFormableClay");
         
-        itemCastingFormAxeHead = new GE_Item("GE_itemCastingFormAxeHead");
-        itemCastingFormAxeHead.setMaxStackSize(1);
-        GameRegistry.registerItem(itemCastingFormAxeHead, "GE_itemCastingFormAxeHead");
+    	itemFormArrowHead = new GE_Item("GE_itemFormArrowHead");
+    	itemFormArrowHead.setMaxStackSize(1);
+        GameRegistry.registerItem(itemFormArrowHead, "GE_itemFormArrowHead");
         
-        itemCastingFormBoard = new GE_Item("GE_itemCastingFormBoard");
-        itemCastingFormBoard.setMaxStackSize(1);
-        GameRegistry.registerItem(itemCastingFormBoard, "GE_itemCastingFormBoard");
+        itemFormAxeHead = new GE_Item("GE_itemFormAxeHead");
+        itemFormAxeHead.setMaxStackSize(1);
+        GameRegistry.registerItem(itemFormAxeHead, "GE_itemFormAxeHead");
         
-        itemCastingFormBroadaxeHead = new GE_Item("GE_itemCastingFormBroadaxeHead");
-        itemCastingFormBroadaxeHead.setMaxStackSize(1);
-        GameRegistry.registerItem(itemCastingFormBroadaxeHead, "GE_itemCastingFormBroadaxeHead");
+        itemFormBoard = new GE_Item("GE_itemFormBoard");
+        itemFormBoard.setMaxStackSize(1);
+        GameRegistry.registerItem(itemFormBoard, "GE_itemFormBoard");
         
-        itemCastingFormChiselHead = new GE_Item("GE_itemCastingFormChiselHead");
-        itemCastingFormChiselHead.setMaxStackSize(1);
-        GameRegistry.registerItem(itemCastingFormChiselHead, "GE_itemCastingFormChiselHead");
+        itemFormBroadaxeHead = new GE_Item("GE_itemFormBroadaxeHead");
+        itemFormBroadaxeHead.setMaxStackSize(1);
+        GameRegistry.registerItem(itemFormBroadaxeHead, "GE_itemFormBroadaxeHead");
         
-        itemCastingFormCrossbar = new GE_Item("GE_itemCastingFormCrossbar");
-        itemCastingFormCrossbar.setMaxStackSize(1);
-        GameRegistry.registerItem(itemCastingFormCrossbar, "GE_itemCastingFormCrossbar");
+        itemFormChiselHead = new GE_Item("GE_itemFormChiselHead");
+        itemFormChiselHead.setMaxStackSize(1);
+        GameRegistry.registerItem(itemFormChiselHead, "GE_itemFormChiselHead");
         
-        itemCastingFormExcavator = new GE_Item("GE_itemCastingFormExcavator");
-        itemCastingFormExcavator.setMaxStackSize(1);
-        GameRegistry.registerItem(itemCastingFormExcavator, "GE_itemCastingFormExcavator");
+        itemFormCrossbar = new GE_Item("GE_itemFormCrossbar");
+        itemFormCrossbar.setMaxStackSize(1);
+        GameRegistry.registerItem(itemFormCrossbar, "GE_itemFormCrossbar");
         
-        itemCastingFormFullGuard = new GE_Item("GE_itemCastingFormFullGuard");
-        itemCastingFormFullGuard.setMaxStackSize(1);
-        GameRegistry.registerItem(itemCastingFormFullGuard, "GE_itemCastingFormFullGuard");
+        itemFormExcavator = new GE_Item("GE_itemFormExcavator");
+        itemFormExcavator.setMaxStackSize(1);
+        GameRegistry.registerItem(itemFormExcavator, "GE_itemFormExcavator");
         
-        itemCastingFormHammerHead = new GE_Item("GE_itemCastingFormHammerHead");
-        itemCastingFormHammerHead.setMaxStackSize(1);
-        GameRegistry.registerItem(itemCastingFormHammerHead, "GE_itemCastingFormHammerHead");
+        itemFormFullGuard = new GE_Item("GE_itemFormFullGuard");
+        itemFormFullGuard.setMaxStackSize(1);
+        GameRegistry.registerItem(itemFormFullGuard, "GE_itemFormFullGuard");
         
-        itemCastingFormIngot = new GE_Item("GE_itemCastingFormIngot");
-        itemCastingFormIngot.setMaxStackSize(1);
-        GameRegistry.registerItem(itemCastingFormIngot, "GE_itemCastingFormIngot");
+        itemFormHammerHead = new GE_Item("GE_itemFormHammerHead");
+        itemFormHammerHead.setMaxStackSize(1);
+        GameRegistry.registerItem(itemFormHammerHead, "GE_itemFormHammerHead");
         
-        itemCastingFormKnifeBlade = new GE_Item("GE_itemCastingFormKnifeBlade");
-        itemCastingFormKnifeBlade.setMaxStackSize(1);
-        GameRegistry.registerItem(itemCastingFormKnifeBlade, "GE_itemCastingFormKnifeBlade");
+        itemFormIngot = new GE_Item("GE_itemFormIngot");
+        itemFormIngot.setMaxStackSize(1);
+        GameRegistry.registerItem(itemFormIngot, "GE_itemFormIngot");
         
-        itemCastingFormLargeBlade = new GE_Item("GE_itemCastingFormLargeBlade");
-        itemCastingFormLargeBlade.setMaxStackSize(1);
-        GameRegistry.registerItem(itemCastingFormLargeBlade, "GE_itemCastingFormLargeBlade");
+        itemFormKnifeBlade = new GE_Item("GE_itemFormKnifeBlade");
+        itemFormKnifeBlade.setMaxStackSize(1);
+        GameRegistry.registerItem(itemFormKnifeBlade, "GE_itemFormKnifeBlade");
         
-        itemCastingFormNugget = new GE_Item("GE_itemCastingFormNugget");
-        itemCastingFormNugget.setMaxStackSize(1);
-        GameRegistry.registerItem(itemCastingFormNugget, "GE_itemCastingFormNugget");
+        itemFormLargeBlade = new GE_Item("GE_itemFormLargeBlade");
+        itemFormLargeBlade.setMaxStackSize(1);
+        GameRegistry.registerItem(itemFormLargeBlade, "GE_itemFormLargeBlade");
         
-        itemCastingFormPan = new GE_Item("GE_itemCastingFormPan");
-        itemCastingFormPan.setMaxStackSize(1);
-        GameRegistry.registerItem(itemCastingFormPan, "GE_itemCastingFormPan");
+        itemFormNugget = new GE_Item("GE_itemFormNugget");
+        itemFormNugget.setMaxStackSize(1);
+        GameRegistry.registerItem(itemFormNugget, "GE_itemFormNugget");
         
-        itemCastingFormPickaxeHead = new GE_Item("GE_itemCastingFormPickaxeHead");
-        itemCastingFormPickaxeHead.setMaxStackSize(1);
-        GameRegistry.registerItem(itemCastingFormPickaxeHead, "GE_itemCastingFormPickaxeHead");
+        itemFormPan = new GE_Item("GE_itemFormPan");
+        itemFormPan.setMaxStackSize(1);
+        GameRegistry.registerItem(itemFormPan, "GE_itemFormPan");
         
-        itemCastingFormPlate = new GE_Item("GE_itemCastingFormPlate");
-        itemCastingFormPlate.setMaxStackSize(1);
-        GameRegistry.registerItem(itemCastingFormPlate, "GE_itemCastingFormPlate");
+        itemFormPickaxeHead = new GE_Item("GE_itemFormPickaxeHead");
+        itemFormPickaxeHead.setMaxStackSize(1);
+        GameRegistry.registerItem(itemFormPickaxeHead, "GE_itemFormPickaxeHead");
         
-        itemCastingFormRod = new GE_Item("GE_itemCastingFormRod");
-        itemCastingFormRod.setMaxStackSize(1);
-        GameRegistry.registerItem(itemCastingFormRod, "GE_itemCastingFormRod");
+        itemFormPlate = new GE_Item("GE_itemFormPlate");
+        itemFormPlate.setMaxStackSize(1);
+        GameRegistry.registerItem(itemFormPlate, "GE_itemFormPlate");
         
-        itemCastingFormScytheHead = new GE_Item("GE_itemCastingFormScytheHead");
-        itemCastingFormScytheHead.setMaxStackSize(1);
-        GameRegistry.registerItem(itemCastingFormScytheHead, "GE_itemCastingFormScytheHead");
+        itemFormRod = new GE_Item("GE_itemFormRod");
+        itemFormRod.setMaxStackSize(1);
+        GameRegistry.registerItem(itemFormRod, "GE_itemFormRod");
         
-        itemCastingFormShovelHead = new GE_Item("GE_itemCastingFormShovelHead");
-        itemCastingFormShovelHead.setMaxStackSize(1);
-        GameRegistry.registerItem(itemCastingFormShovelHead, "GE_itemCastingFormShovelHead");
+        itemFormScytheHead = new GE_Item("GE_itemFormScytheHead");
+        itemFormScytheHead.setMaxStackSize(1);
+        GameRegistry.registerItem(itemFormScytheHead, "GE_itemFormScytheHead");
         
-        itemCastingFormSwordBlade = new GE_Item("GE_itemCastingFormSwordBlade");
-        itemCastingFormSwordBlade.setMaxStackSize(1);
-        GameRegistry.registerItem(itemCastingFormSwordBlade, "GE_itemCastingFormSwordBlade");
+        itemFormShovelHead = new GE_Item("GE_itemFormShovelHead");
+        itemFormShovelHead.setMaxStackSize(1);
+        GameRegistry.registerItem(itemFormShovelHead, "GE_itemFormShovelHead");
         
-        itemCastingFormToolBinding = new GE_Item("GE_itemCastingFormToolBinding");
-        itemCastingFormToolBinding.setMaxStackSize(1);
-        GameRegistry.registerItem(itemCastingFormToolBinding, "GE_itemCastingFormToolBinding");
+        itemFormSwordBlade = new GE_Item("GE_itemFormSwordBlade");
+        itemFormSwordBlade.setMaxStackSize(1);
+        GameRegistry.registerItem(itemFormSwordBlade, "GE_itemFormSwordBlade");
         
-        itemCastingFormToughBinding = new GE_Item("GE_itemCastingFormToughBinding");
-        itemCastingFormToughBinding.setMaxStackSize(1);
-        GameRegistry.registerItem(itemCastingFormToughBinding, "GE_itemCastingFormToughBinding");
+        itemFormToolBinding = new GE_Item("GE_itemFormToolBinding");
+        itemFormToolBinding.setMaxStackSize(1);
+        GameRegistry.registerItem(itemFormToolBinding, "GE_itemFormToolBinding");
+        
+        itemFormToughBinding = new GE_Item("GE_itemFormToughBinding");
+        itemFormToughBinding.setMaxStackSize(1);
+        GameRegistry.registerItem(itemFormToughBinding, "GE_itemFormToughBinding");
         
         
     	//Dummy
