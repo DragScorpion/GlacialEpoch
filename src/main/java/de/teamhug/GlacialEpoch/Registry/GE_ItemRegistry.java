@@ -17,8 +17,9 @@ public class GE_ItemRegistry
 	public static Item itemBovine_skin; 	//Rinderhaut
 	public static Item itemCowHead; 		//Kuhkopf
 	public static Item itemSlaughteringAx; 	//Schlachterbeil
+	public static Item itemButchersKnife;	//Schlachtermesser
 
-	
+
 	//ButcherTools
 	public static Item itemHidesCutter;
 	public static Item itemCuttingKnife;
@@ -125,7 +126,12 @@ public class GE_ItemRegistry
         itemSlaughteringAx = new GE_Item("GE_itemSlaughteringAx");
         itemSlaughteringAx.setMaxStackSize(1);
         itemSlaughteringAx.setCreativeTab(GE_CreativeTabs.tabGEButcher);
-        GameRegistry.registerItem(itemSlaughteringAx, "GE_itemSlaughteringAx");        
+        GameRegistry.registerItem(itemSlaughteringAx, "GE_itemSlaughteringAx");
+        
+        itemButchersKnife = new GE_Item("GE_itemButchersKnife");
+        itemButchersKnife.setMaxStackSize(1);
+        itemButchersKnife.setCreativeTab(GE_CreativeTabs.tabGEButcher);
+        GameRegistry.registerItem(itemButchersKnife, "GE_itemButchersKnife");
 
         
         //Tools

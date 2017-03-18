@@ -9,6 +9,7 @@ item.GE_itemBovine_skin.name=Bovine skin
 item.GE_itemCowHead.name=Cow Head
 item.GE_itemSlaughteringAx.name=Slaughtering Ax
 item.GE_itemPrimitiveTool.name=Primitive Tool
+item.GE_itemButchersKnife.name=Butchers Knife
 
 //--- Blocks
 tile.GE_blockDummyBlock.name=Dummy Block
