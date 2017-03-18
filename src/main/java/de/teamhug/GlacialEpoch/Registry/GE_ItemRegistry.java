@@ -12,17 +12,23 @@ public class GE_ItemRegistry
 {
 
     //Butcher
+	//Cow
 	public static Item itemCadaverCow;		//Kuhkörper
 	public static Item itemBovine_half; 	//Rinderhälfte
 	public static Item itemBovine_skin; 	//Rinderhaut
 	public static Item itemCowHead; 		//Kuhkopf
-	public static Item itemSlaughteringAx; 	//Schlachterbeil
-	public static Item itemButchersKnife;	//Schlachtermesser
-
+	
+	//Sheep
+	public static Item itemCadaverSheep;    //SchafKörper
+	public static Item itemSheepSkin;     	//Schafhaut
+	public static Item itemSheepHead;		//Schafkopf
+	public static Item itemSheepHalf;		//Schafhälfte
 
 	//ButcherTools
-	public static Item itemHidesCutter;
-	public static Item itemCuttingKnife;
+	public static Item itemHidesCutter;		//Häutemesser
+	public static Item itemCuttingKnife;	//Stechmesser
+	public static Item itemSlaughteringAx; 	//Schlachterbeil
+	public static Item itemButchersKnife;	//Schlachtermesser
 	
 
 	//Tools
@@ -110,6 +116,30 @@ public class GE_ItemRegistry
         itemCowHead.setMaxStackSize(64);
         itemCowHead.setCreativeTab(GE_CreativeTabs.tabGEButcher);
         GameRegistry.registerItem(itemCowHead, "itemCowHead");
+        
+        //Sheep
+        
+        itemCadaverSheep = new GE_Item("GE_itemCadaverSheep");
+        itemCadaverSheep.setMaxStackSize(64);
+        itemCadaverSheep.setCreativeTab(GE_CreativeTabs.tabGEButcher);
+        GameRegistry.registerItem(itemCadaverSheep, "GE_itemCadaverSheep");
+        
+        itemSheepHead = new GE_Item("GE_itemSheepHead");
+        itemSheepHead.setMaxStackSize(64);
+        itemSheepHead.setCreativeTab(GE_CreativeTabs.tabGEButcher);
+        GameRegistry.registerItem(itemSheepHead, "GE_itemSheepHead");
+        
+        itemSheepHalf = new GE_Item("GE_itemSheepHalf");
+        itemSheepHalf.setMaxStackSize(64);
+        itemSheepHalf.setCreativeTab(GE_CreativeTabs.tabGEButcher);
+        GameRegistry.registerItem(itemSheepHalf, "GE_itemSheepHalf");
+        
+        itemSheepSkin = new GE_Item("GE_itemSheepSkin");
+        itemSheepSkin.setMaxStackSize(64);
+        itemSheepSkin.setCreativeTab(GE_CreativeTabs.tabGEButcher);
+        GameRegistry.registerItem(itemSheepSkin, "GE_itemSheepSkin");
+        
+        
         
 
         //ButcherTools
