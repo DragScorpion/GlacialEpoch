@@ -17,6 +17,7 @@ public class GE_CommonProxy
     public void preInit(FMLPreInitializationEvent event)
     {
         GE_ItemRegistry.registerItems();
+        GE_ItemButcherMod.registerItem();
         GE_BlockRegistry.registerBlocks();
         GE_FuelRegistry.registerFuels();
         GE_TileEntityRegistry.registerTileEntity();

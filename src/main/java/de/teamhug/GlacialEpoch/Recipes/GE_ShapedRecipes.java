@@ -1,7 +1,7 @@
 package de.teamhug.GlacialEpoch.Recipes;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import de.teamhug.GlacialEpoch.Registry.GE_ItemRegistry;
+import de.teamhug.GlacialEpoch.Registry.GE_ItemButcherMod;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
@@ -11,13 +11,13 @@ public class GE_ShapedRecipes
     public static void registerItemRecipes()
     {
 
-        GameRegistry.addRecipe(new ItemStack(GE_ItemRegistry.itemHidesCutter),
+        GameRegistry.addRecipe(new ItemStack(GE_ItemButcherMod.itemHidesCutter),
             /*Recipe*/      "  F",
                 			"BF ",
                 			"SB ",
 			/*Material*/    'F', Items.flint, 'B', Items.string, 'S', Items.stick);
     
-        GameRegistry.addRecipe(new ItemStack(GE_ItemRegistry.itemCuttingKnife),
+        GameRegistry.addRecipe(new ItemStack(GE_ItemButcherMod.itemCuttingKnife),
              /*Recipe*/      "D  ",
                     		 " DB",
                     		 "  S",
@@ -27,7 +27,7 @@ public class GE_ShapedRecipes
              /*Recipe*/      "DK ",
                        		 "   ",
                        		 "   ",
-             /*Material*/    'D', GE_ItemRegistry.itemCadaverCow, 'K', GE_ItemRegistry.itemHidesCutter);
+             /*Material*/    'D', GE_ItemButcherMod.itemCadaverCow, 'K', GE_ItemButcherMod.itemHidesCutter);
 
     }
 

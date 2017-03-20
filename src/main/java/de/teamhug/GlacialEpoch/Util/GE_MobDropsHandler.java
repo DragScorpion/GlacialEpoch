@@ -1,6 +1,7 @@
 package de.teamhug.GlacialEpoch.Util;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import de.teamhug.GlacialEpoch.Registry.GE_ItemButcherMod;
 import de.teamhug.GlacialEpoch.Registry.GE_ItemRegistry;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.passive.EntityCow;
@@ -21,7 +22,7 @@ public class GE_MobDropsHandler {
 	        {
 	            event.drops.clear();
 	 
-	            ItemStack stack = new ItemStack(GE_ItemRegistry.itemCadaverCow);
+	            ItemStack stack = new ItemStack(GE_ItemButcherMod.itemCadaverCow);
 	            EntityItem drop = new EntityItem(event.entity.worldObj, event.entity.posX, event.entity.posY, event.entity.posZ, stack);
 	 
 	            event.drops.add(drop);

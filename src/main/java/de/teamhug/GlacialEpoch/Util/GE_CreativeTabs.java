@@ -1,6 +1,7 @@
 package de.teamhug.GlacialEpoch.Util;
 
 import de.teamhug.GlacialEpoch.Registry.GE_BlockRegistry;
+import de.teamhug.GlacialEpoch.Registry.GE_ItemButcherMod;
 import de.teamhug.GlacialEpoch.Registry.GE_ItemRegistry;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
@@ -33,7 +34,7 @@ public class GE_CreativeTabs
         @Override
         public Item getTabIconItem()
         {
-            return GE_ItemRegistry.itemHidesCutter;
+            return GE_ItemButcherMod.itemHidesCutter;
         }
     };
 }

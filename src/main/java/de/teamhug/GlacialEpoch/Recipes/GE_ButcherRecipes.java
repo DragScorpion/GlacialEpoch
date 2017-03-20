@@ -2,7 +2,7 @@ package de.teamhug.GlacialEpoch.Recipes;
 
 import java.util.ArrayList;
 
-import de.teamhug.GlacialEpoch.Registry.GE_ItemRegistry;
+import de.teamhug.GlacialEpoch.Registry.GE_ItemButcherMod;
 import de.teamhug.GlacialEpoch.Util.GE_ButcherRecipe;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -19,17 +19,16 @@ public class GE_ButcherRecipes {
 	
 	public static void registerRecipes() {
 		
-		tools.add(new ItemStack(GE_ItemRegistry.itemHidesCutter));
-		tools.add(new ItemStack(GE_ItemRegistry.itemCuttingKnife));
+		tools.add(new ItemStack(GE_ItemButcherMod.itemHidesCutter));
+		tools.add(new ItemStack(GE_ItemButcherMod.itemCuttingKnife));
 		tools.add(new ItemStack(Items.water_bucket));
-		water.add(new ItemStack(Items.water_bucket));
 		
 		addRecipe(new GE_ButcherRecipe()
-				.setInput(new ItemStack(GE_ItemRegistry.itemCadaverCow))
+				.setInput(new ItemStack(GE_ItemButcherMod.itemCadaverCow))
 				.setTools(tools)
-				.addOutput(new ItemStack(GE_ItemRegistry.itemBovine_half, 2, 1))
-				.addOutput(new ItemStack(GE_ItemRegistry.itemBovine_skin, 1, 1))
-				.addOutput(new ItemStack(GE_ItemRegistry.itemCowHead, 1, 1))
+				.addOutput(new ItemStack(GE_ItemButcherMod.itemBovine_half, 2, 1))
+				.addOutput(new ItemStack(GE_ItemButcherMod.itemBovine_skin, 1, 1))
+				.addOutput(new ItemStack(GE_ItemButcherMod.itemCowHead, 1, 1))
 				.addOutput(new ItemStack(Items.bucket, 2, 1))); 
 	}
 	
