@@ -33,15 +33,13 @@ public class GE_ButcherRecipes {
 				.setTools(tools)
 				.addOutput(new ItemStack(GE_ItemButcherMod.itemBovine_half, 2, 1))
 				.addOutput(new ItemStack(GE_ItemButcherMod.itemBovine_skin, 1, 1))
-				.addOutput(new ItemStack(GE_ItemButcherMod.itemCowHead, 1, 1))
-				.addOutput(new ItemStack(Items.bucket, 1, 1))); 
+				.addOutput(new ItemStack(GE_ItemButcherMod.itemCowHead, 1, 1))); 
 		}
 		{
 		addRecipe(new GE_ButcherRecipe()
 				.setInput(new ItemStack(GE_ItemButcherMod.itemBovine_half))
 				.setTools(tools2)
-				.addOutput(new ItemStack(Items.beef, 6, 1))
-				.addOutput(new ItemStack(Items.bucket, 2, 1)));
+				.addOutput(new ItemStack(Items.beef, 6, 1)));				
 	
 		}
 	}
