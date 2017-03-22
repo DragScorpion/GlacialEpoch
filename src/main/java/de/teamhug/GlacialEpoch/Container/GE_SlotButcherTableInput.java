@@ -1,7 +1,9 @@
 package de.teamhug.GlacialEpoch.Container;
 
+import de.teamhug.GlacialEpoch.Recipes.GE_ButcherRecipes;
 import de.teamhug.GlacialEpoch.Registry.GE_ItemButcherMod;
 import de.teamhug.GlacialEpoch.Registry.GE_ItemRegistry;
+import de.teamhug.GlacialEpoch.Util.GE_ButcherRecipe;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
@@ -14,11 +16,14 @@ public class GE_SlotButcherTableInput extends Slot {
 	}
 	
 	@Override
-	public boolean isItemValid(ItemStack item) {
-		if (item.getItem().equals(GE_ItemButcherMod.itemCadaverCow))
-			return true;
-		if (item.getItem().equals(GE_ItemButcherMod.itemBovine_half))
-			return true;
+	public boolean isItemValid(ItemStack itemStack) {
+		java.util.Iterator<GE_ButcherRecipe> iterator = GE_ButcherRecipes.recipes.iterator();
+		while (iterator.hasNext()) {
+			GE_ButcherRecipe tempRecipe = iterator.next();
+			if (tempRecipe.getInputItem().getItem().equals(itemStack.getItem())) {
+				return true;
+			}
+		}
 		return false;
 	}
 

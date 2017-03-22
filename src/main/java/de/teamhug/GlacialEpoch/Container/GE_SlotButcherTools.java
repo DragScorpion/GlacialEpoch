@@ -1,7 +1,11 @@
 package de.teamhug.GlacialEpoch.Container;
 
+import java.util.Iterator;
+
+import de.teamhug.GlacialEpoch.Recipes.GE_ButcherRecipes;
 import de.teamhug.GlacialEpoch.Registry.GE_ItemButcherMod;
 import de.teamhug.GlacialEpoch.Registry.GE_ItemRegistry;
+import de.teamhug.GlacialEpoch.Util.GE_ButcherRecipe;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.Slot;
@@ -14,17 +18,18 @@ public class GE_SlotButcherTools extends Slot {
 	}
 	
 	@Override
-	public boolean isItemValid(ItemStack item) {
-		if (item.getItem().equals(GE_ItemButcherMod.itemHidesCutter))
-			return true;
-		if (item.getItem().equals(GE_ItemButcherMod.itemCuttingKnife))
-			return true;
-		if (item.getItem().equals(GE_ItemButcherMod.itemSlaughteringAx))
-			return true;
-		if (item.getItem().equals(GE_ItemButcherMod.itemButchersKnife))
-			return true;
-		if (item.getItem().equals(Items.water_bucket))
-			return true;
+	public boolean isItemValid(ItemStack itemStack) {
+		java.util.Iterator<GE_ButcherRecipe> iteratorRecipe = GE_ButcherRecipes.recipes.iterator();
+		while (iteratorRecipe.hasNext()) {
+			GE_ButcherRecipe tempRecipe = iteratorRecipe.next();
+			Iterator<ItemStack> iteratorTool = tempRecipe.getToolItems().iterator();
+			while (iteratorTool.hasNext()) {
+				ItemStack tool = iteratorTool.next();
+				if (tool.getItem().equals(itemStack.getItem())) {
+					return true;
+				}
+			}
+		}
 		return false;
 	}
 
