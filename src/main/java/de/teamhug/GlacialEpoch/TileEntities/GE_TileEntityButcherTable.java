@@ -19,6 +19,12 @@ public class GE_TileEntityButcherTable extends TileEntity implements IInventory 
 	
 	// Inventory Slot Array
 	private ItemStack[] inventory = new ItemStack[24];
+	/* Inventory Slots sorted:
+	 * Input slots 0-8
+	 * Fuel slot 9
+	 * Tool slots 10-14
+	 * Output slots 15-24
+	 */
 	
 	//Remaining burnTime
 	public int burnTime;
@@ -127,7 +133,7 @@ public class GE_TileEntityButcherTable extends TileEntity implements IInventory 
 			java.util.Iterator<GE_ButcherRecipe> iterator = GE_ButcherRecipes.recipes.iterator();
 			while (iterator.hasNext()) {
 				GE_ButcherRecipe tempRecipe = iterator.next();
-				if (tempRecipe.getInputItem().isItemEqual(this.inventory[i])) {
+				if (tempRecipe.getInputItem().getItem().equals(this.inventory[i].getItem())) {
 					recipe = tempRecipe;
 					break;
 				}
@@ -146,7 +152,7 @@ public class GE_TileEntityButcherTable extends TileEntity implements IInventory 
 			boolean flag = false;
 			for (int i = 0; i < 5; i++) {
 				if (this.inventory[i+10] == null) continue;
-				if (item.isItemEqual(this.inventory[i+10])) {
+				if (item.getItem().equals(this.inventory[i+10].getItem())) {
 					flag = true;
 					break;
 				}
@@ -174,7 +180,7 @@ public class GE_TileEntityButcherTable extends TileEntity implements IInventory 
 						freeSlot = i;
 					continue;
 				} else {
-					if (item.isItemEqual(tempInventory[i]) && tempInventory[i].stackSize < getInventoryStackLimit()) {
+					if (item.getItem().equals(tempInventory[i].getItem()) && tempInventory[i].stackSize < getInventoryStackLimit()) {
 						int tempSize = Math.min(getInventoryStackLimit() - tempInventory[i].stackSize, item.stackSize);
 						tempInventory[i].stackSize += tempSize;
 						item.stackSize -= tempSize;
@@ -205,7 +211,7 @@ public class GE_TileEntityButcherTable extends TileEntity implements IInventory 
 			java.util.Iterator<GE_ButcherRecipe> iterator = GE_ButcherRecipes.recipes.iterator();
 			while (iterator.hasNext()) {
 				GE_ButcherRecipe tempRecipe = iterator.next();
-				if (tempRecipe.getInputItem().isItemEqual(this.inventory[i])) {
+				if (tempRecipe.getInputItem().getItem().equals(this.inventory[i].getItem())) {
 					recipe = tempRecipe;
 					slot = i;
 					break;
@@ -253,11 +259,10 @@ public class GE_TileEntityButcherTable extends TileEntity implements IInventory 
 						freeSlot = i;
 					continue;
 				} else {
-					if (item.isItemEqual(this.inventory[i+15]) && this.inventory[i+15].stackSize < getInventoryStackLimit()) {
+					if (item.getItem().equals(this.inventory[i+15].getItem()) && this.inventory[i+15].stackSize < getInventoryStackLimit()) {
 						int tempSize = Math.min(getInventoryStackLimit() - this.inventory[i+15].stackSize, item.stackSize);
 						this.inventory[i+15].stackSize += tempSize;
 						item.stackSize -= tempSize;
-						System.out.println(this.inventory[i+15].stackSize + ", " + tempSize + ", " + item.stackSize);
 					}
 					if (item.stackSize <= 0) {
 						flag = true;

@@ -29,20 +29,20 @@ public class GE_ContainerButcherTable extends Container {
     public GE_ContainerButcherTable(InventoryPlayer inventory, GE_TileEntityButcherTable te) {
     	this.tileEntity = te;
     	
-    	for (int i = 0; i < 3; i++) {
-    		for (int j = 0; j < 3; j++) {
-    			this.addSlotToContainer(new Slot(te, j+i*3, 26+18*j, 28+18*i));
+    	for (int i = 2; i >= 0; i--) {
+    		for (int j = 2; j >= 0; j--) {
+    			this.addSlotToContainer(new GE_SlotButcherTableInput(te, j+i*3, 26+18*j, 28+18*i));
     		}
     	}
+    	for (int i = 4; i >= 0; i--) {
+    		this.addSlotToContainer(new GE_SlotButcherTools(te, i+TOOL, 62+18*i, 90));
+    	}
+    	this.addSlotToContainer(new GE_SlotFuel(te, FUEL, 122, 63));
     	for (int i = 0; i < 3; i++) {
     		for (int j = 0; j < 3; j++) {
     			this.addSlotToContainer(new GE_SlotOutput(te, j+i*3+OUTPUT, 170+18*j, 28+18*i));
     		}
     	}
-    	for (int i = 0; i < 5; i++) {
-    		this.addSlotToContainer(new Slot(te, i+TOOL, 62+18*i, 90));
-    	}
-    	this.addSlotToContainer(new Slot(te, FUEL, 122, 63));
     	
     	for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 9; j++) {
@@ -158,4 +158,95 @@ public class GE_ContainerButcherTable extends Container {
 		return stack;
 	}
 	
+	
+	@Override
+	protected boolean mergeItemStack(ItemStack stack, int beginSlot, int endSlot, boolean reverse)
+    {
+        boolean flag1 = false;
+        int k = beginSlot;
+
+        if (reverse)
+        {
+            k = endSlot - 1;
+        }
+
+        Slot slot;
+        ItemStack itemstack1;
+
+        if (stack.isStackable())
+        {
+            while (stack.stackSize > 0 && (!reverse && k < endSlot || reverse && k >= beginSlot))
+            {
+                slot = (Slot)this.inventorySlots.get(k);
+                itemstack1 = slot.getStack();
+
+                if (itemstack1 != null && itemstack1.getItem() == stack.getItem() && (!stack.getHasSubtypes() || stack.getItemDamage() == itemstack1.getItemDamage()) && ItemStack.areItemStackTagsEqual(stack, itemstack1))
+                {
+                    int l = itemstack1.stackSize + stack.stackSize;
+
+                    if (l <= stack.getMaxStackSize())
+                    {
+                        stack.stackSize = 0;
+                        itemstack1.stackSize = l;
+                        slot.onSlotChanged();
+                        flag1 = true;
+                    }
+                    else if (itemstack1.stackSize < stack.getMaxStackSize())
+                    {
+                        stack.stackSize -= stack.getMaxStackSize() - itemstack1.stackSize;
+                        itemstack1.stackSize = stack.getMaxStackSize();
+                        slot.onSlotChanged();
+                        flag1 = true;
+                    }
+                }
+
+                if (reverse)
+                {
+                    --k;
+                }
+                else
+                {
+                    ++k;
+                }
+            }
+        }
+
+        if (stack.stackSize > 0)
+        {
+            if (reverse)
+            {
+                k = endSlot - 1;
+            }
+            else
+            {
+                k = beginSlot;
+            }
+
+            while (!reverse && k < endSlot || reverse && k >= beginSlot)
+            {
+                slot = (Slot)this.inventorySlots.get(k);
+                itemstack1 = slot.getStack();
+
+                if (itemstack1 == null && slot.isItemValid(stack))
+                {
+                    slot.putStack(stack.copy());
+                    slot.onSlotChanged();
+                    stack.stackSize = 0;
+                    flag1 = true;
+                    break;
+                }
+
+                if (reverse)
+                {
+                    --k;
+                }
+                else
+                {
+                    ++k;
+                }
+            }
+        }
+
+        return flag1;
+    }
 }
