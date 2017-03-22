@@ -12,18 +12,33 @@ public class GE_ItemButcherMod {
 
 	//Butcher
 		//Cow
+	
 		public static Item itemCadaverCow;		//Kuhkörper
 		public static Item itemBovine_half; 	//Rinderhälfte
 		public static Item itemBovine_skin; 	//Rinderhaut
 		public static Item itemCowHead; 		//Kuhkopf
 		
 		//Sheep
+		
 		public static Item itemCadaverSheep;    //SchafKörper
 		public static Item itemSheepSkin;     	//Schafhaut
 		public static Item itemSheepHead;		//Schafkopf
 		public static Item itemSheepHalf;		//Schafhälfte
+		
+		//Pig
+		
+		public static Item itemCadaverPig;
+		public static Item itemPigSkin;
+		public static Item itemPigHead;
+		public static Item itemPigHalf;
+		
+		//Chicken
+		
+		public static Item itemCadaverCkicken;
+		public static Item itemCkickenHead;
 
 		//ButcherTools
+		
 		public static Item itemHidesCutter;		//Häutemesser
 		public static Item itemCuttingKnife;	//Stechmesser
 		public static Item itemSlaughteringAx; 	//Schlachterbeil
@@ -32,6 +47,7 @@ public class GE_ItemButcherMod {
 		public static void registerItem()
 		{
 			//Cow
+			
 	        itemCadaverCow = new GE_Item("GE_itemCadaverCow");
 	        itemCadaverCow.setMaxStackSize(64);
 	        itemCadaverCow.setCreativeTab(GE_CreativeTabs.tabGEButcher);
@@ -74,10 +90,43 @@ public class GE_ItemButcherMod {
 	        itemSheepSkin.setCreativeTab(GE_CreativeTabs.tabGEButcher);
 	        GameRegistry.registerItem(itemSheepSkin, "GE_itemSheepSkin");
 	        
+	        //Pig
+	        
+	        itemCadaverPig = new GE_Item("GE_itemCadaverPig");
+	        itemCadaverPig.setMaxStackSize(64);
+	        itemCadaverPig.setCreativeTab(GE_CreativeTabs.tabGEButcher);
+	        GameRegistry.registerItem(itemCadaverPig, "GE_itemCadaverPig");
+	        
+	        itemPigSkin = new GE_Item("GE_itemPigSkin");
+	        itemPigSkin.setMaxStackSize(64);
+	        itemPigSkin.setCreativeTab(GE_CreativeTabs.tabGEButcher);
+	        GameRegistry.registerItem(itemPigSkin, "GE_itemPigSkin");
+	        
+	        itemPigHead = new GE_Item("GE_itemPigHead");
+	        itemPigHead.setMaxStackSize(64);
+	        itemPigHead.setCreativeTab(GE_CreativeTabs.tabGEButcher);
+	        GameRegistry.registerItem(itemPigHead, "GE_itemPigHead");
+	        
+	        itemPigHalf = new GE_Item("GE_itemPigHalf");
+	        itemPigHalf.setMaxStackSize(64);
+	        itemPigHalf.setCreativeTab(GE_CreativeTabs.tabGEButcher);
+	        GameRegistry.registerItem(itemPigHalf, "GE_itemPigHalf");
+	        
+	        //Chicken
+	        
+	        itemCadaverCkicken = new GE_Item("GE_itemCadaverCkicken");
+	        itemCadaverCkicken.setMaxStackSize(64);
+	        itemCadaverCkicken.setCreativeTab(GE_CreativeTabs.tabGEButcher);
+	        GameRegistry.registerItem(itemCadaverCkicken, "GE_itemCadaverCkicken");
+	        
+	        itemCkickenHead = new GE_Item("GE_itemCkickenHead");
+	        itemCkickenHead.setMaxStackSize(64);
+	        itemCkickenHead.setCreativeTab(GE_CreativeTabs.tabGEButcher);
+	        GameRegistry.registerItem(itemCkickenHead, "GE_itemCkickenHead");
 	        
 	        
-
 	        //ButcherTools
+	        
 	        itemHidesCutter = new GE_Item("GE_itemHidesCutter");
 	        itemHidesCutter.setMaxStackSize(1);
 	        itemHidesCutter.setCreativeTab(GE_CreativeTabs.tabGEButcher);
