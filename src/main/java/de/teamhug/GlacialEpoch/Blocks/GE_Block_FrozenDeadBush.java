@@ -1,7 +1,7 @@
-package de.TeamHUG.GlacialEpoch.Blocks;
+package de.teamhug.GlacialEpoch.Blocks;
 
-import de.TeamHUG.GlacialEpoch.Main;
-import de.TeamHUG.GlacialEpoch.Utilities.MainUtilities;
+import de.teamhug.GlacialEpoch.GE_Main;
+import de.teamhug.GlacialEpoch.Util.GE_CreativeTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBush;
 import net.minecraft.block.material.Material;
@@ -13,8 +13,8 @@ public IIcon[] icons = new IIcon[6];
 	public GE_Block_FrozenDeadBush(String unlocalizedName) {
 		super(Material.vine);
         float f = 0.4F;
-        this.setBlockTextureName(Main.MODID + ":" + unlocalizedName);
-        this.setCreativeTab(MainUtilities.tabGlacialEpoch);
+        this.setBlockTextureName(GE_Main.MODID + ":" + unlocalizedName);
+        this.setCreativeTab(GE_CreativeTabs.tabGEBlocks);
         this.setHardness(0.0f);
         this.setHarvestLevel(null, 0);
         this.setStepSound(soundTypeGrass);

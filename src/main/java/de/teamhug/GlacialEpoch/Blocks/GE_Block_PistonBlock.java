@@ -1,7 +1,7 @@
-package de.TeamHUG.GlacialEpoch.Blocks;
+package de.teamhug.GlacialEpoch.Blocks;
 
-import de.TeamHUG.GlacialEpoch.Main;
-import de.TeamHUG.GlacialEpoch.Utilities.MainUtilities;
+import de.teamhug.GlacialEpoch.GE_Main;
+import de.teamhug.GlacialEpoch.Util.GE_CreativeTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockLog;
 import net.minecraft.block.material.Material;
@@ -14,8 +14,8 @@ public IIcon[] icons = new IIcon[6];
 	public GE_Block_PistonBlock(String unlocalizedName) {
 		super(Material.rock);												//Abbausound des Blockes
 		this.setBlockName(unlocalizedName);									//Blockname
-		this.setBlockTextureName(Main.MODID + ":" + unlocalizedName);		//Texture name
-		this.setCreativeTab(MainUtilities.tabGlacialEpoch);					//Creative Tab
+		this.setBlockTextureName(GE_Main.MODID + ":" + unlocalizedName);	//Texture name
+		this.setCreativeTab(GE_CreativeTabs.tabGEBlocks);					//Creative Tab
 		this.setHardness(2.0f);												//Block Härte
 		this.setResistance(10.0f);											//Resistenz
 		this.setHarvestLevel("pickaxe", 1);									//Abbaulevel

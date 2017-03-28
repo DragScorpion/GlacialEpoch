@@ -12,6 +12,8 @@ public class GE_ItemRegistry
 {
 	//Tools
 	public static Item itemPrimitiveTool;
+	
+	public static Item itemPistonHead;
 
 	
 	//BurnedForms
@@ -82,6 +84,9 @@ public class GE_ItemRegistry
         itemPrimitiveTool = new GE_Item("GE_itemPrimitiveTool");
         itemPrimitiveTool.setMaxStackSize(1);
         GameRegistry.registerItem(itemPrimitiveTool, "GE_itemPrimitiveTool");
+        
+        itemPistonHead = new GE_Item("GE_itemPistonHead");
+        GameRegistry.registerItem(itemPistonHead, "GE_itemPistonHead");
 
         
         //BurnedForms

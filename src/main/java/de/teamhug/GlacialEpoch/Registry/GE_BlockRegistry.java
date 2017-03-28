@@ -20,6 +20,8 @@ public class GE_BlockRegistry
     
     public static Block blockCampFire;
     public static Block blockButcherTable;
+    
+    public static Block blockPistonBlock;
 
     public static void registerBlocks()
     {
@@ -41,6 +43,10 @@ public class GE_BlockRegistry
     	// Dummy 
     	blockDummyBlock = new GE_Block("GE_blockDummyBlock", Material.rock);
         GameRegistry.registerBlock(blockDummyBlock, "GE_blockDummyBlock");
+        
+        
+        blockPistonBlock = new GE_Block("GE_blockPistonBlock", Material.rock);
+        GameRegistry.registerBlock(blockPistonBlock, "GE_blockPistonBlock");
 
     }
 }
