@@ -12,8 +12,14 @@ public class GE_ItemRegistry
 {
 	//Tools
 	public static Item itemPrimitiveTool;
+	public static Item itemPrimitiveHammerHead;
+	public static Item itemPrimitiveHammer;
 	
 	public static Item itemPistonHead;
+	
+	
+	//material
+	public static Item itemFlintPlate;
 
 	
 	//BurnedForms
@@ -81,12 +87,25 @@ public class GE_ItemRegistry
         
         //Tools
         
+    	itemPrimitiveHammerHead = new GE_Item("GE_itemPrimitiveHammerHead");
+    	itemPrimitiveHammerHead.setMaxStackSize(1);
+        GameRegistry.registerItem(itemPrimitiveHammerHead, "GE_itemPrimitiveHammerHead");
+        
+        itemPrimitiveHammer = new GE_Item("itemPrimitiveHammer");
+        itemPrimitiveHammer.setMaxStackSize(1);
+        GameRegistry.registerItem(itemPrimitiveHammer, "itemPrimitiveHammer");
+        
         itemPrimitiveTool = new GE_Item("GE_itemPrimitiveTool");
         itemPrimitiveTool.setMaxStackSize(1);
         GameRegistry.registerItem(itemPrimitiveTool, "GE_itemPrimitiveTool");
         
         itemPistonHead = new GE_Item("GE_itemPistonHead");
         GameRegistry.registerItem(itemPistonHead, "GE_itemPistonHead");
+        
+        
+        //Material
+        itemFlintPlate = new GE_Item("GE_itemFlintPlate");
+        GameRegistry.registerItem(itemFlintPlate, "GE_itemFlintPlate");  
 
         
         //BurnedForms
