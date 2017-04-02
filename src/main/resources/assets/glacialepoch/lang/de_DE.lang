@@ -10,10 +10,13 @@ item.GE_itemCowHead.name=Kuhkopf
 item.GE_itemSlaughteringAx.name=Schlachterbeil
 item.GE_itemPrimitiveTool.name=Primitives Werkzeug
 item.GE_itemButchersKnife.name=Schlachtermesser
+item.GE_itemPistonHead.name=Kolbenkopf
 
 //--- Blocks
 tile.GE_blockDummyBlock.name=Dummy Block
 tile.GE_BlockButcherTable.name=Schlachtbank
+tile.GE_blockDeadWoodFrozen.name=Gefrorenes totes Holz
+tile.GE_blockPistonBlock.name=Kolben Block
 
 //--- Tabs
 itemGroup.GE_tabItems=Glacial Epoch Items

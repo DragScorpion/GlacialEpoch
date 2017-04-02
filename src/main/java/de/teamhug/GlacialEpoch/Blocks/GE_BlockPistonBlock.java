@@ -8,10 +8,10 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.util.IIcon;
 
-public class GE_Block_PistonBlock extends Block {
+public class GE_BlockPistonBlock extends Block {
 public IIcon[] icons = new IIcon[6];
 	
-	public GE_Block_PistonBlock(String unlocalizedName) {
+	public GE_BlockPistonBlock(String unlocalizedName) {
 		super(Material.rock);												//Abbausound des Blockes
 		this.setBlockName(unlocalizedName);									//Blockname
 		this.setBlockTextureName(GE_Main.MODID + ":" + unlocalizedName);	//Texture name

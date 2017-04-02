@@ -99,14 +99,16 @@ public class GE_ItemRegistry
         itemPrimitiveTool.setMaxStackSize(1);
         GameRegistry.registerItem(itemPrimitiveTool, "GE_itemPrimitiveTool");
         
-        itemPistonHead = new GE_Item("GE_itemPistonHead");
-        GameRegistry.registerItem(itemPistonHead, "GE_itemPistonHead");
-        
         
         //Material
         itemFlintPlate = new GE_Item("GE_itemFlintPlate");
         GameRegistry.registerItem(itemFlintPlate, "GE_itemFlintPlate");  
 
+        
+        // Miscellaneous
+        itemPistonHead = new GE_Item("GE_itemPistonHead");
+        GameRegistry.registerItem(itemPistonHead, "GE_itemPistonHead");
+        
         
         //BurnedForms
     	itemBurnedFormArrowHead = new GE_Item("GE_itemBurnedFormArrowHead");

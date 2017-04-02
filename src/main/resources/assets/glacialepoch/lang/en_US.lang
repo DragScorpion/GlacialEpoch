@@ -10,10 +10,13 @@ item.GE_itemCowHead.name=Cow Head
 item.GE_itemSlaughteringAx.name=Slaughtering Ax
 item.GE_itemPrimitiveTool.name=Primitive Tool
 item.GE_itemButchersKnife.name=Butchers Knife
+item.GE_itemPistonHead.name=Piston Head
 
 //--- Blocks
 tile.GE_blockDummyBlock.name=Dummy Block
 tile.GE_BlockButcherTable.name=Butcher Table
+tile.GE_blockDeadWoodFrozen.name=Frozen Dead Wood
+tile.GE_blockPistonBlock.name=Piston Block
 
 //--- Tabs
 itemGroup.GE_tabItems=GE Items

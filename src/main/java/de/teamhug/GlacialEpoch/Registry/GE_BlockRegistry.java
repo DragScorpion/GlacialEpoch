@@ -5,6 +5,7 @@ import de.teamhug.GlacialEpoch.Blocks.GE_Block;
 import de.teamhug.GlacialEpoch.Blocks.GE_BlockButcherTable;
 import de.teamhug.GlacialEpoch.Blocks.GE_BlockCampFire;
 import de.teamhug.GlacialEpoch.Blocks.GE_BlockDeadWood;
+import de.teamhug.GlacialEpoch.Blocks.GE_BlockPistonBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
@@ -40,13 +41,13 @@ public class GE_BlockRegistry
         blockButcherTable = new GE_BlockButcherTable("GE_BlockButcherTable", Material.rock);
         GameRegistry.registerBlock(blockButcherTable, "GE_BlockButcherTable");
     	
-    	// Dummy 
+        // Miscellaneous
+        blockPistonBlock = new GE_BlockPistonBlock("GE_blockPistonBlock");
+        GameRegistry.registerBlock(blockPistonBlock, "GE_blockPistonBlock");
+        
+        // Dummy 
     	blockDummyBlock = new GE_Block("GE_blockDummyBlock", Material.rock);
         GameRegistry.registerBlock(blockDummyBlock, "GE_blockDummyBlock");
-        
-        
-        blockPistonBlock = new GE_Block("GE_blockPistonBlock", Material.rock);
-        GameRegistry.registerBlock(blockPistonBlock, "GE_blockPistonBlock");
 
     }
 }

@@ -25,7 +25,7 @@ public class GE_BlockDeadWood extends BlockRotatedPillar
     @Override
     public void registerBlockIcons(IIconRegister register)
     {
-        icons[0] = register.registerIcon(this.getTextureName());
+        icons[0] = register.registerIcon(this.getTextureName() + "_Side");
         icons[1] = register.registerIcon(this.getTextureName() + "_top");
     }
 
