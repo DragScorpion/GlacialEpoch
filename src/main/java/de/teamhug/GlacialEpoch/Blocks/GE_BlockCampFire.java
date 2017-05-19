@@ -27,8 +27,23 @@ public class GE_BlockCampFire extends BlockContainer {
 		this.setResistance(15.0f);
 		this.setHarvestLevel("axe", 1);
 		this.setStepSound(soundTypeWood);
+		this.setBlockBounds(0, 0, 0, 1, 0.5F, 1);
     }
-
+	@Override
+	public boolean renderAsNormalBlock() {
+		return false;
+	}
+	
+	@Override
+	public int getRenderType() {
+		return -1;
+	}
+	
+	@Override
+	public boolean isOpaqueCube() {
+		return false;
+	}
+	
 	@Override
 	public TileEntity createNewTileEntity(World world, int meta) {
 		return new GE_TileEntityCampFire();

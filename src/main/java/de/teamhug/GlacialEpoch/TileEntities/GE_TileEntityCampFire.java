@@ -2,8 +2,11 @@ package de.teamhug.GlacialEpoch.TileEntities;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockHardenedClay;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
+import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
@@ -102,7 +105,11 @@ public class GE_TileEntityCampFire extends TileEntity implements IInventory {
             return false;
         } else {
             ItemStack itemstack = FurnaceRecipes.smelting().getSmeltingResult(this.inventory[0]);
+            
             if (itemstack == null) return false;
+            if (!(itemstack.getItem() instanceof ItemFood) && !(Block.getBlockFromItem(itemstack.getItem()) instanceof BlockHardenedClay)) {
+            	return false;
+            }
             if (this.inventory[2] == null) return true;
             if (!this.inventory[2].isItemEqual(itemstack)) return false;
             int result = inventory[2].stackSize + itemstack.stackSize;
