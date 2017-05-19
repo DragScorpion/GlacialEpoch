@@ -2,7 +2,7 @@ package de.teamhug.GlacialEpoch.Registry;
 
 import cpw.mods.fml.common.network.NetworkRegistry;
 import de.teamhug.GlacialEpoch.GE_Main;
-import de.teamhug.GlacialEpoch.GraphicelUserInterfaces.GE_GuiHandler;
+import de.teamhug.GlacialEpoch.GraphicalUserInterfaces.GE_GuiHandler;
 
 public class GE_GuiRegistry {
 	

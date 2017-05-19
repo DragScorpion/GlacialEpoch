@@ -2,7 +2,7 @@ package de.teamhug.GlacialEpoch.Registry;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import de.teamhug.GlacialEpoch.Items.GE_Item;
-import de.teamhug.GlacialEpoch.Util.GE_CreativeTabs;
+import de.teamhug.GlacialEpoch.Items.Tools.GE_PrimitiveTool;
 import net.minecraft.item.Item;
 
 /**
@@ -95,8 +95,7 @@ public class GE_ItemRegistry
         itemPrimitiveHammer.setMaxStackSize(1);
         GameRegistry.registerItem(itemPrimitiveHammer, "itemPrimitiveHammer");
         
-        itemPrimitiveTool = new GE_Item("GE_itemPrimitiveTool");
-        itemPrimitiveTool.setMaxStackSize(1);
+        itemPrimitiveTool = new GE_PrimitiveTool();
         GameRegistry.registerItem(itemPrimitiveTool, "GE_itemPrimitiveTool");
         
         
