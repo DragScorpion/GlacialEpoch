@@ -12,6 +12,8 @@ item.GE_itemPrimitiveTool.name=Primitives Werkzeug
 item.GE_itemButchersKnife.name=Schlachtermesser
 item.GE_itemPistonHead.name=Kolbenkopf
 
+item.GE_itemStrawBed.name=Stroh Bett
+
 //--- Blocks
 tile.GE_blockDummyBlock.name=Dummy Block
 tile.GE_BlockButcherTable.name=Schlachtbank

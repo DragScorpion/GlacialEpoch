@@ -1,11 +1,7 @@
 package de.teamhug.GlacialEpoch.Registry;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import de.teamhug.GlacialEpoch.Blocks.GE_Block;
-import de.teamhug.GlacialEpoch.Blocks.GE_BlockButcherTable;
-import de.teamhug.GlacialEpoch.Blocks.GE_BlockCampFire;
-import de.teamhug.GlacialEpoch.Blocks.GE_BlockDeadWood;
-import de.teamhug.GlacialEpoch.Blocks.GE_BlockPistonBlock;
+import de.teamhug.GlacialEpoch.Blocks.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
@@ -23,6 +19,8 @@ public class GE_BlockRegistry
     public static Block blockButcherTable;
     
     public static Block blockPistonBlock;
+
+    public static Block blockStrawBed;
 
     public static void registerBlocks()
     {
@@ -49,5 +47,7 @@ public class GE_BlockRegistry
     	blockDummyBlock = new GE_Block("GE_blockDummyBlock", Material.rock);
         GameRegistry.registerBlock(blockDummyBlock, "GE_blockDummyBlock");
 
+        blockStrawBed = new GE_BlockStrawBed();
+        GameRegistry.registerBlock(blockStrawBed, "GE_blockStrawBed");
     }
 }
