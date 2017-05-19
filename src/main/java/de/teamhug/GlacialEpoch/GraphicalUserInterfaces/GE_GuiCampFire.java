@@ -1,4 +1,4 @@
-package de.teamhug.GlacialEpoch.GraphicelUserInterfaces;
+package de.teamhug.GlacialEpoch.GraphicalUserInterfaces;
 
 import org.lwjgl.opengl.GL11;
 

@@ -1,4 +1,4 @@
-package de.teamhug.GlacialEpoch.GraphicelUserInterfaces;
+package de.teamhug.GlacialEpoch.GraphicalUserInterfaces;
 
 import cpw.mods.fml.common.network.IGuiHandler;
 import de.teamhug.GlacialEpoch.Container.GE_ContainerButcherTable;

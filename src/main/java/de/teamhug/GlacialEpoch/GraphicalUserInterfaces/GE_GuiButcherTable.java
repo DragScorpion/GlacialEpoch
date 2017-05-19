@@ -1,16 +1,12 @@
-package de.teamhug.GlacialEpoch.GraphicelUserInterfaces;
+package de.teamhug.GlacialEpoch.GraphicalUserInterfaces;
 
-import org.lwjgl.opengl.GL11;
-
-import de.teamhug.GlacialEpoch.GE_Main;
 import de.teamhug.GlacialEpoch.Container.GE_ContainerButcherTable;
-import de.teamhug.GlacialEpoch.Container.GE_ContainerCampFire;
+import de.teamhug.GlacialEpoch.GE_Main;
 import de.teamhug.GlacialEpoch.TileEntities.GE_TileEntityButcherTable;
-import de.teamhug.GlacialEpoch.TileEntities.GE_TileEntityCampFire;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
-import net.minecraft.inventory.Container;
 import net.minecraft.util.ResourceLocation;
+import org.lwjgl.opengl.GL11;
 
 public class GE_GuiButcherTable extends GuiContainer {
 	
