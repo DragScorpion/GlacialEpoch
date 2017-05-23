@@ -24,8 +24,7 @@ public class GE_ContainerClayFurnace extends Container {
 	private int lastCookTime;
     private int lastBurnTime;
     private int lastItemBurnTime;
-	
-    //Test 2 dies ist ein zweiter Test
+
     public GE_ContainerClayFurnace(InventoryPlayer inventory, GE_TileEntityClayFurnace te) {
 		this.tileEntity = te;
         this.addSlotToContainer(new Slot(te, 0, 56, 17));
@@ -37,13 +36,11 @@ public class GE_ContainerClayFurnace extends Container {
 				this.addSlotToContainer(new Slot(inventory, i*9+j+9, 8+18*j, 84+18*i));
 			}
 		}
-		// TEst K1ng
 		for (int i = 0; i < 9; i++) {
 			this.addSlotToContainer(new Slot(inventory, i, 8+18*i, 142));
 		}
 	}
-    
-    //Test 3
+
 	public void addCraftingToCrafters(ICrafting p_75132_1_)
     {
         super.addCraftingToCrafters(p_75132_1_);
