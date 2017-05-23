@@ -37,7 +37,7 @@ public class GE_ContainerClayFurnace extends Container {
 				this.addSlotToContainer(new Slot(inventory, i*9+j+9, 8+18*j, 84+18*i));
 			}
 		}
-		
+		// TEst K1ng
 		for (int i = 0; i < 9; i++) {
 			this.addSlotToContainer(new Slot(inventory, i, 8+18*i, 142));
 		}
