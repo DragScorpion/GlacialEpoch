@@ -25,6 +25,7 @@ public class GE_ContainerClayFurnace extends Container {
     private int lastBurnTime;
     private int lastItemBurnTime;
 	
+    //Test 2 dies ist ein zweiter Test
     public GE_ContainerClayFurnace(InventoryPlayer inventory, GE_TileEntityClayFurnace te) {
 		this.tileEntity = te;
         this.addSlotToContainer(new Slot(te, 0, 56, 17));
