@@ -43,7 +43,8 @@ public class GE_ContainerClayFurnace extends Container {
 		}
 	}
     
-    public void addCraftingToCrafters(ICrafting p_75132_1_)
+    //Test 3
+	public void addCraftingToCrafters(ICrafting p_75132_1_)
     {
         super.addCraftingToCrafters(p_75132_1_);
         p_75132_1_.sendProgressBarUpdate(this, 0, this.tileEntity.cookTime);
