@@ -4,7 +4,7 @@ item.GE_itemDummyItem2.name=Dummy Item 2
 item.GE_itemCadaverCow.name=Kuhkadaver
 item.GE_itemHidesCutter.name=Haeutemesser
 item.GE_itemCuttingKnife.name=Stechmesser
-item.GE_itemBovine_half.name=Rinderhälfte
+item.GE_itemBovine_half.name=Rinderhaelfte
 item.GE_itemBovine_skin.name=Rinderhaut
 item.GE_itemCowHead.name=Kuhkopf
 item.GE_itemSlaughteringAx.name=Schlachterbeil
@@ -13,10 +13,12 @@ item.GE_itemButchersKnife.name=Schlachtermesser
 item.GE_itemPistonHead.name=Kolbenkopf
 
 //--- Blocks
-tile.GE_blockDummyBlock.name=Dummy Block
+tile.GE_BlockDummyBlock.name=Dummy Block
 tile.GE_BlockButcherTable.name=Schlachtbank
-tile.GE_blockDeadWoodFrozen.name=Gefrorenes totes Holz
-tile.GE_blockPistonBlock.name=Kolben Block
+tile.GE_BlockDeadWoodFrozen.name=Gefrorenes totes Holz
+tile.GE_BlockPistonBlock.name=Kolben Block
+//TODO Ein anderes fuer Controller
+tile.GE_BlockClayFurnace.name=Lehm Offen Controller
 
 //--- Tabs
 itemGroup.GE_tabItems=Glacial Epoch Items

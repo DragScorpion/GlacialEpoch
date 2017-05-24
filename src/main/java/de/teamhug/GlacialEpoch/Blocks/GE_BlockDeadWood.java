@@ -20,13 +20,14 @@ public class GE_BlockDeadWood extends BlockRotatedPillar
         this.setBlockName(unlocalizedName);
         this.setBlockTextureName(GE_Main.MODID + ":" + unlocalizedName);
         this.setCreativeTab(GE_CreativeTabs.tabGEBlocks);
+        this.setHardness(2.5f);
     }
 
     @Override
     public void registerBlockIcons(IIconRegister register)
     {
         icons[0] = register.registerIcon(this.getTextureName() + "_Side");
-        icons[1] = register.registerIcon(this.getTextureName() + "_top");
+        icons[1] = register.registerIcon(this.getTextureName() + "_Top");
     }
 
     @Override

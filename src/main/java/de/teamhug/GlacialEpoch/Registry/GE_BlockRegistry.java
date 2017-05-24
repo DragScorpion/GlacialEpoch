@@ -30,11 +30,11 @@ public class GE_BlockRegistry
     {
         
     	// Dead Wood
-        blockDeadWood = new GE_BlockDeadWood("GE_blockDeadWood", Material.rock);
-        GameRegistry.registerBlock(blockDeadWood, "GE_blockDeadWood");
+        //blockDeadWood = new GE_BlockDeadWood("GE_blockDeadWood", Material.rock);
+        //GameRegistry.registerBlock(blockDeadWood, "GE_blockDeadWood");
 
-        blockDeadWoodFrozen = new GE_BlockDeadWood("GE_blockDeadWoodFrozen", Material.ice);
-        GameRegistry.registerBlock(blockDeadWoodFrozen, "GE_blockDeadWoodFrozen");
+        blockDeadWoodFrozen = new GE_BlockDeadWood("GE_BlockDeadWoodFrozen", Material.ice);
+        GameRegistry.registerBlock(blockDeadWoodFrozen, "GE_BlockDeadWoodFrozen");
     	
         // TileEntities Blocks
         blockCampFire = new  GE_BlockCampFire("GE_BlockCampFire", Material.rock);
@@ -47,12 +47,12 @@ public class GE_BlockRegistry
         GameRegistry.registerBlock(blockButcherTable, "GE_BlockButcherTable");
     	
         // Miscellaneous
-        blockPistonBlock = new GE_BlockPistonBlock("GE_blockPistonBlock");
-        GameRegistry.registerBlock(blockPistonBlock, "GE_blockPistonBlock");
+        blockPistonBlock = new GE_BlockPistonBlock("GE_BlockPistonBlock");
+        GameRegistry.registerBlock(blockPistonBlock, "GE_BlockPistonBlock");
         
         // Dummy 
-    	blockDummyBlock = new GE_Block("GE_blockDummyBlock", Material.rock);
-        GameRegistry.registerBlock(blockDummyBlock, "GE_blockDummyBlock");
+    	blockDummyBlock = new GE_Block("GE_BlockDummyBlock", Material.rock);
+        GameRegistry.registerBlock(blockDummyBlock, "GE_BlockDummyBlock");
 
     }
 }

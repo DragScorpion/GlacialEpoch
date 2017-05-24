@@ -17,6 +17,7 @@ tile.GE_blockDummyBlock.name=Dummy Block
 tile.GE_BlockButcherTable.name=Butcher Table
 tile.GE_blockDeadWoodFrozen.name=Frozen Dead Wood
 tile.GE_blockPistonBlock.name=Piston Block
+tile.GE_BlockClayFurnace.name=Clay Furnace Controller
 
 //--- Tabs
 itemGroup.GE_tabItems=GE Items

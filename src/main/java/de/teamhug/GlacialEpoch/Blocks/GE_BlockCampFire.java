@@ -1,6 +1,7 @@
 package de.teamhug.GlacialEpoch.Blocks;
 
 import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
+import cpw.mods.fml.relauncher.SideOnly;
 import de.teamhug.GlacialEpoch.GE_Main;
 import de.teamhug.GlacialEpoch.Registry.GE_GuiRegistry;
 import de.teamhug.GlacialEpoch.TileEntities.GE_TileEntityCampFire;
@@ -29,6 +30,15 @@ public class GE_BlockCampFire extends BlockContainer {
 		this.setStepSound(soundTypeWood);
 		this.setBlockBounds(0, 0, 0, 1, 0.5F, 1);
     }
+
+
+    //TODO Create a ItemBlock for the cmapfire to show in inventories
+	@Override
+	public String getItemIconName()
+	{
+		return "GE_itemPrimitiveTool";
+	}
+
 	@Override
 	public boolean renderAsNormalBlock() {
 		return false;
@@ -38,22 +48,22 @@ public class GE_BlockCampFire extends BlockContainer {
 	public int getRenderType() {
 		return -1;
 	}
-	
+
 	@Override
 	public boolean isOpaqueCube() {
 		return false;
 	}
-	
+
 	@Override
 	public TileEntity createNewTileEntity(World world, int meta) {
 		return new GE_TileEntityCampFire();
 	}
-	
+
 	@Override
 	public void onBlockPlacedBy(World world, int xCoord, int yCoord, int zCoord, EntityLivingBase placer, ItemStack stack) {
 		super.onBlockPlacedBy(world, xCoord, yCoord, zCoord, placer, stack);
 	}
-	
+
 	@Override
 	public void breakBlock(World world, int xCoord, int yCoord, int zCoord, Block block, int state) {
 		GE_TileEntityCampFire te = (GE_TileEntityCampFire)world.getTileEntity(xCoord, yCoord, zCoord);
@@ -69,7 +79,7 @@ public class GE_BlockCampFire extends BlockContainer {
 		te.blockMetadata = 1;
 		super.breakBlock(world, xCoord, yCoord, zCoord, block, state);
 	}
-	
+
 	@Override
 	public boolean onBlockActivated(World world, int x, int y, int z, EntityPlayer player, int side, float hitX, float hitY, float hitZ) {
 		if (!world.isRemote) {
@@ -77,5 +87,5 @@ public class GE_BlockCampFire extends BlockContainer {
 		}
 		return true;
 	}
-	
+
 }

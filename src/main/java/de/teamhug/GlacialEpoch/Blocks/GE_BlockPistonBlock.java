@@ -16,25 +16,25 @@ public IIcon[] icons = new IIcon[6];
 		this.setBlockName(unlocalizedName);									//Blockname
 		this.setBlockTextureName(GE_Main.MODID + ":" + unlocalizedName);	//Texture name
 		this.setCreativeTab(GE_CreativeTabs.tabGEBlocks);					//Creative Tab
-		this.setHardness(2.0f);												//Block Härte
+		this.setHardness(2.0f);												//Block Haerte
 		this.setResistance(10.0f);											//Resistenz
 		this.setHarvestLevel("pickaxe", 1);									//Abbaulevel
-		this.setStepSound(soundTypeStone);									//Gegeräusche
-		this.setBlockBounds(0, 0, 0, 1, 1, 1);								//Block Größe
-		this.setLightOpacity(15);											//Blockdurchlässigkeit
+		this.setStepSound(soundTypeStone);									//Geraeusche
+		this.setBlockBounds(0, 0, 0, 1, 1, 1);								//Block Groesse
+		this.setLightOpacity(15);											//Blocktransparaenz
 	
 	}
 
 	@Override
 	public void registerBlockIcons(IIconRegister reg) {
 		for (int i = 0; i < 6; i++) {
-				if(i==0 || i==1) {
-					this.icons[i] = reg.registerIcon(this.textureName + "_Top");
-				}
-				
-				else {
-					this.icons[i] = reg.registerIcon(this.textureName + "_Side");
-				}
+			if(i==0 || i==1) {
+				this.icons[i] = reg.registerIcon(this.textureName + "_Top");
+			}
+
+			else {
+				this.icons[i] = reg.registerIcon(this.textureName + "_Side");
+			}
 			
 		}
 	}
