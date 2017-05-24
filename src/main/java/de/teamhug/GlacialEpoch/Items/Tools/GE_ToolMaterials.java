@@ -8,5 +8,5 @@ import net.minecraftforge.common.util.EnumHelper;
  */
 public class GE_ToolMaterials
 {
-    public static Item.ToolMaterial PRIMITIVE = EnumHelper.addToolMaterial("PRIMITIVE", 0, 40, 2.0F, 0.0F, 2);
+    public static Item.ToolMaterial PRIMITIVE = EnumHelper.addToolMaterial("PRIMITIVE", 0, 10, 2.0F, 0.0F, 2);
 }
