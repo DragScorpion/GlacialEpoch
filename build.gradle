@@ -17,7 +17,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = ""//0.0.0-teamcity:buildnumber"
+version = "0.0.0-teamcity:buildnumber"
 group= "de.teamhug.glacialepoch" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "glacialepoch"
 
