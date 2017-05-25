@@ -89,8 +89,8 @@ public class GE_TileEntityClayFurnace extends TileEntity implements IInventory {
 		for (int i = 0; i < structure.length; i++) {
 			
 			int x = (i % 3);
-			int y = Math.floorDiv(i, 9);
-			int z = Math.floorDiv((i % 9), 3);
+			int y = (int)Math.floor(i / 9);
+			int z = (int)Math.floor((i % 9) / 3);
 			
 			if (x+offsetX == 0 && y+offsetY == 0 && z+offsetZ == 0) {
 				continue;

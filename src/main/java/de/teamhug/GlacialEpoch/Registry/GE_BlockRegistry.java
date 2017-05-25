@@ -1,12 +1,7 @@
 package de.teamhug.GlacialEpoch.Registry;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import de.teamhug.GlacialEpoch.Blocks.GE_Block;
-import de.teamhug.GlacialEpoch.Blocks.GE_BlockButcherTable;
-import de.teamhug.GlacialEpoch.Blocks.GE_BlockCampFire;
-import de.teamhug.GlacialEpoch.Blocks.GE_BlockClayFurnace;
-import de.teamhug.GlacialEpoch.Blocks.GE_BlockDeadWood;
-import de.teamhug.GlacialEpoch.Blocks.GE_BlockPistonBlock;
+import de.teamhug.GlacialEpoch.Blocks.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
@@ -17,8 +12,8 @@ public class GE_BlockRegistry
 {
     public static Block blockDummyBlock;
 
-    public static Block blockDeadWood;
-    public static Block blockDeadWoodFrozen;
+    public static Block blockBush;
+    public static Block blockFrozenDeadWood;
     
     public static Block blockCampFire;
     public static Block blockClayFurnace;
@@ -28,31 +23,29 @@ public class GE_BlockRegistry
 
     public static void registerBlocks()
     {
-        
-    	// Dead Wood
-        //blockDeadWood = new GE_BlockDeadWood("GE_blockDeadWood", Material.rock);
-        //GameRegistry.registerBlock(blockDeadWood, "GE_blockDeadWood");
+        blockFrozenDeadWood = new GE_BlockFrozenDeadWood("GE_blockFrozenDeadWood", Material.ice);
+        GameRegistry.registerBlock(blockFrozenDeadWood, "GE_blockFrozenDeadWood");
 
-        blockDeadWoodFrozen = new GE_BlockDeadWood("GE_BlockDeadWoodFrozen", Material.ice);
-        GameRegistry.registerBlock(blockDeadWoodFrozen, "GE_BlockDeadWoodFrozen");
+        blockBush = new GE_BlockBush("GE_blockBush", 0);
+        GameRegistry.registerBlock(blockBush, "GE_blockBush");
     	
         // TileEntities Blocks
-        blockCampFire = new  GE_BlockCampFire("GE_BlockCampFire", Material.rock);
-        GameRegistry.registerBlock(blockCampFire, "GE_BlockCampFire");
+        blockCampFire = new  GE_BlockCampFire("GE_blockCampFire", Material.rock);
+        GameRegistry.registerBlock(blockCampFire, "GE_blockCampFire");
         
-        blockClayFurnace = new  GE_BlockClayFurnace("GE_BlockClayFurnace", Material.clay);
-        GameRegistry.registerBlock(blockClayFurnace, "GE_BlockClayFurnace");
+        blockClayFurnace = new  GE_BlockClayFurnace("GE_blockClayFurnace", Material.clay);
+        GameRegistry.registerBlock(blockClayFurnace, "GE_blockClayFurnace");
         
-        blockButcherTable = new GE_BlockButcherTable("GE_BlockButcherTable", Material.rock);
-        GameRegistry.registerBlock(blockButcherTable, "GE_BlockButcherTable");
+        blockButcherTable = new GE_BlockButcherTable("GE_blockButcherTable", Material.rock);
+        GameRegistry.registerBlock(blockButcherTable, "GE_blockButcherTable");
     	
         // Miscellaneous
-        blockPistonBlock = new GE_BlockPistonBlock("GE_BlockPistonBlock");
-        GameRegistry.registerBlock(blockPistonBlock, "GE_BlockPistonBlock");
+        blockPistonBlock = new GE_BlockPistonBlock("GE_blockPistonBlock");
+        GameRegistry.registerBlock(blockPistonBlock, "GE_blockPistonBlock");
         
         // Dummy 
-    	blockDummyBlock = new GE_Block("GE_BlockDummyBlock", Material.rock);
-        GameRegistry.registerBlock(blockDummyBlock, "GE_BlockDummyBlock");
+    	//blockDummyBlock = new GE_Block("GE_blockDummyBlock", Material.rock);
+        //GameRegistry.registerBlock(blockDummyBlock, "GE_blockDummyBlock");
 
     }
 }

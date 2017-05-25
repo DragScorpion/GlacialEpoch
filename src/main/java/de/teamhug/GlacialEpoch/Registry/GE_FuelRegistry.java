@@ -22,7 +22,7 @@ public class GE_FuelRegistry implements IFuelHandler
         Item fuelItem = fuel.getItem();
         Block fuelBlock = Block.getBlockFromItem(fuel.getItem());
         
-        if(fuelBlock == GE_BlockRegistry.blockDeadWood)
+        if(fuelBlock == GE_BlockRegistry.blockFrozenDeadWood)
         {
             return 200;
         }
