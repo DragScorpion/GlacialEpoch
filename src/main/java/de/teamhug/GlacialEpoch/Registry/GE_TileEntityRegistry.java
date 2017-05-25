@@ -4,6 +4,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import de.teamhug.GlacialEpoch.TileEntities.GE_TileEntityButcherTable;
 import de.teamhug.GlacialEpoch.TileEntities.GE_TileEntityCampFire;
 import de.teamhug.GlacialEpoch.TileEntities.GE_TileEntityStrawBed;
+import de.teamhug.GlacialEpoch.TileEntities.GE_TileEntityClayFurnace;
 import net.minecraft.tileentity.TileEntity;
 
 public class GE_TileEntityRegistry
@@ -13,10 +14,14 @@ public class GE_TileEntityRegistry
 		GameRegistry.registerTileEntity(GE_TileEntityCampFire.class, "GE_TileEntityCampFire");
 		TileEntity.addMapping(GE_TileEntityCampFire.class, "GE_TileEntityCampFire_map");
 		
+		GameRegistry.registerTileEntity(GE_TileEntityClayFurnace.class, "GE_TileEntityClayFurnace");
+		TileEntity.addMapping(GE_TileEntityClayFurnace.class, "GE_TileEntityClayFurnace_map");
+		
 		GameRegistry.registerTileEntity(GE_TileEntityButcherTable.class, "GE_TileEntityButcherTable");
 		TileEntity.addMapping(GE_TileEntityButcherTable.class, "GE_TileEntityButcherTable_map");
 
 		GameRegistry.registerTileEntity(GE_TileEntityStrawBed.class, "GE_TileEntityStrawBed");
+    TileEntity.addMapping(GE_TileEntityStrawBed.class, "GE_TileEntityStrawBed_map");
 	}
 	
 }

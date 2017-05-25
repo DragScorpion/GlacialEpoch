@@ -12,7 +12,6 @@ import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 
 public class GE_ContainerButcherTable extends Container {
-	
 	private int INPUT = 0;
 	private int FUEL = INPUT+9;
 	private int TOOL = FUEL+1;

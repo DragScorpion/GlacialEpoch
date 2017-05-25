@@ -3,12 +3,12 @@ package de.teamhug.GlacialEpoch.TileEntities;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockAir;
 import net.minecraft.block.BlockHardenedClay;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.inventory.IInventory;
-import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.network.NetworkManager;
@@ -16,8 +16,9 @@ import net.minecraft.network.Packet;
 import net.minecraft.network.play.server.S35PacketUpdateTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityFurnace;
+import net.minecraftforge.common.util.ForgeDirection;
 
-public class GE_TileEntityCampFire extends TileEntity implements IInventory {
+public class GE_TileEntityClayFurnace extends TileEntity implements IInventory {
 	
 	private ItemStack[] inventory = new ItemStack[3];
     /** The number of ticks that the furnace will keep burning */
@@ -26,8 +27,19 @@ public class GE_TileEntityCampFire extends TileEntity implements IInventory {
     public int currentItemBurnTime;
     /** The number of ticks that the current item has been cooking for */
     public int cookTime;
+    
+    public int checkTimer = 0;
+    
+    public boolean created = false;
+    
+    private int[] structure = {
+    		1, 1, 1, 1, 1, 1, 1, 1, 1,
+    		1, 1, 1, 1, 0, 1, 1, 1, 1,
+    		1, 1, 1, 1, 0, 1, 1, 1, 1,
+    		1, 1, 1, 1, 0, 1, 1, 1, 1
+    		};
 	
-	public GE_TileEntityCampFire() {
+    public GE_TileEntityClayFurnace() {
 		inventory = new ItemStack[this.getSizeInventory()];
 	}
 	
@@ -49,93 +61,57 @@ public class GE_TileEntityCampFire extends TileEntity implements IInventory {
         return this.burnTime > 0;
     }
 	
+	/*
+	 * TODO
+	 * ADD updateEntitiy and check if construction is valid.
+	 * ADD check if item can be melted.
+	 * 
+	 */
+	
 	public void updateEntity() {
-        boolean flag = this.burnTime > 0;
-        boolean flag1 = false;
-
-        if (this.burnTime > 0) {
-            --this.burnTime;
-        }
-
-        if (!this.worldObj.isRemote) {
-            if (this.burnTime != 0 || this.inventory[1] != null && this.inventory[0] != null) {
-                if (this.burnTime == 0 && this.canSmelt()) {
-                    this.currentItemBurnTime = this.burnTime = TileEntityFurnace.getItemBurnTime(this.inventory[1]);
-
-                    if (this.burnTime > 0) {
-                        flag1 = true;
-
-                        if (this.inventory[1] != null) {
-                            --this.inventory[1].stackSize;
-
-                            if (this.inventory[1].stackSize == 0) {
-                                this.inventory[1] = inventory[1].getItem().getContainerItem(inventory[1]);
-                            }
-                        }
-                    }
-                }
-
-                if (this.isBurning() && this.canSmelt()) {
-                    ++this.cookTime;
-                    
-                    //Brenn Zeit erh�hen
-                    if (this.cookTime == 200) {
-                        this.cookTime = 0;
-                        this.smeltItem();
-                        flag1 = true;
-                    }
-                } else {
-                    this.cookTime = 0;
-                }
-            }
-
-            if (flag != this.burnTime > 0) {
-                flag1 = true;
-                //BlockFurnace.updateFurnaceBlockState(this.burnTime > 0, this.worldObj, this.xCoord, this.yCoord, this.zCoord);
-            }
-        }
-
-        if (flag1) {
-            this.markDirty();
-        }
-    }
+		checkTimer = (checkTimer+1) % 20;
+		if (checkTimer == 0) {
+			System.out.println(checkIfConstructIsValid());
+		}
+		
+		if (!created) {
+			//System.out.println("TileEntity: " + worldObj.getBlockMetadata(this.xCoord, this.yCoord, this.zCoord));
+			created = true;
+		}
+	}
 	
-	private boolean canSmelt() {
-        if (this.inventory[0] == null) {
-            return false;
-        } else {
-            ItemStack itemstack = FurnaceRecipes.smelting().getSmeltingResult(this.inventory[0]);
-            
-            if (itemstack == null) return false;
-            if (!(itemstack.getItem() instanceof ItemFood) && !(Block.getBlockFromItem(itemstack.getItem()) instanceof BlockHardenedClay)) {
-            	return false;
-            }
-            if (this.inventory[2] == null) return true;
-            if (!this.inventory[2].isItemEqual(itemstack)) return false;
-            int result = inventory[2].stackSize + itemstack.stackSize;
-            return result <= getInventoryStackLimit() && result <= this.inventory[2].getMaxStackSize();
-        }
-    }
-	
-	public void smeltItem() {
-        if (this.canSmelt()) {
-            ItemStack itemstack = FurnaceRecipes.smelting().getSmeltingResult(this.inventory[0]);
-
-            if (this.inventory[2] == null) {
-                this.inventory[2] = itemstack.copy();
-            } else if (this.inventory[2].getItem() == itemstack.getItem()) {
-                this.inventory[2].stackSize += itemstack.stackSize;
-            }
-
-            --this.inventory[0].stackSize;
-
-            if (this.inventory[0].stackSize <= 0) {
-                this.inventory[0] = null;
-            }
-        }
-    }
-	
-	
+	private boolean checkIfConstructIsValid() {
+		int direction = worldObj.getBlockMetadata(this.xCoord, this.yCoord, this.zCoord);
+		ForgeDirection fDirection = ForgeDirection.getOrientation(direction+2);
+		int offsetX = -1-fDirection.offsetX;
+		int offsetY = -1;
+		int offsetZ = -1-fDirection.offsetZ;
+		for (int i = 0; i < structure.length; i++) {
+			
+			int x = (i % 3);
+			int y = (int)Math.floor(i / 9);
+			int z = (int)Math.floor((i % 9) / 3);
+			
+			if (x+offsetX == 0 && y+offsetY == 0 && z+offsetZ == 0) {
+				continue;
+			}
+			
+			Block block = worldObj.getBlock(x+this.xCoord+offsetX, y+this.yCoord+offsetY, z+this.zCoord+offsetZ);
+			switch (structure[i]) {
+			case 0:
+				if (!(block instanceof BlockAir)) {
+					return false;
+				}
+				break;
+			case 1:
+				if (!(block instanceof BlockHardenedClay)) {
+					return false;
+				}
+				break;
+			}
+		}
+		return true;
+	}
 	
 	// Read/Write NBT
 	@Override
@@ -170,8 +146,7 @@ public class GE_TileEntityCampFire extends TileEntity implements IInventory {
 	    this.currentItemBurnTime = TileEntityFurnace.getItemBurnTime(this.inventory[1]);
 	    
 	}
-	
-	
+    
 	// Inventory Methods
 	@Override
 	public int getSizeInventory() {
@@ -287,5 +262,5 @@ public class GE_TileEntityCampFire extends TileEntity implements IInventory {
 		super.onDataPacket(net, pkt);
 		this.readFromNBT(pkt.func_148857_g());
 	}
-	
+
 }

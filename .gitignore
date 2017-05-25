@@ -7,3 +7,5 @@
 /.project
 /bin/**
 /.settings/**
+/out/**
+*.iml

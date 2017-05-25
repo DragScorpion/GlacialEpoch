@@ -8,6 +8,7 @@ public class GE_GuiRegistry {
 	
 	public static final int guiCampFire = 0;
 	public static final int guiButcherTable = 1;
+	public static final int guiClayFurnace = 2;
 
 	public static void registerGUIs()
 	{
