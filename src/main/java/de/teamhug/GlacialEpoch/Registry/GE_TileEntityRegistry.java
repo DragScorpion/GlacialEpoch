@@ -3,6 +3,7 @@ package de.teamhug.GlacialEpoch.Registry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import de.teamhug.GlacialEpoch.TileEntities.GE_TileEntityButcherTable;
 import de.teamhug.GlacialEpoch.TileEntities.GE_TileEntityCampFire;
+import de.teamhug.GlacialEpoch.TileEntities.GE_TileEntityStrawBed;
 import net.minecraft.tileentity.TileEntity;
 
 public class GE_TileEntityRegistry
@@ -14,6 +15,8 @@ public class GE_TileEntityRegistry
 		
 		GameRegistry.registerTileEntity(GE_TileEntityButcherTable.class, "GE_TileEntityButcherTable");
 		TileEntity.addMapping(GE_TileEntityButcherTable.class, "GE_TileEntityButcherTable_map");
+
+		GameRegistry.registerTileEntity(GE_TileEntityStrawBed.class, "GE_TileEntityStrawBed");
 	}
 	
 }
