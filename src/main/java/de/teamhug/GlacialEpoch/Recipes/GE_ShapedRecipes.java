@@ -5,6 +5,7 @@ import de.teamhug.GlacialEpoch.Registry.GE_ItemButcherMod;
 import de.teamhug.GlacialEpoch.Registry.GE_ItemRegistry;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.ShapedOreRecipe;
 
 public class GE_ShapedRecipes
 {
@@ -34,7 +35,14 @@ public class GE_ShapedRecipes
             /*Recipe*/
                 "F ",
                 " S",
-			/*Material*/    'F', Items.flint, 'S', Items.stick);
+            /*Material*/    'F', Items.flint, 'S', Items.stick);
+
+        GameRegistry.addRecipe(
+                new ShapedOreRecipe(new ItemStack(GE_ItemRegistry.itemStrawBed),
+                        "SSS",
+                        "SSS",
+                        "WWW",
+                        'S', Items.wheat, 'W', "plankWood"));
     }
 
     public static void registerBlockRecipes()
