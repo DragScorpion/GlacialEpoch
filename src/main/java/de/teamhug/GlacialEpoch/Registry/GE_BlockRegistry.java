@@ -21,6 +21,8 @@ public class GE_BlockRegistry
     
     public static Block blockPistonBlock;
 
+    public static Block blockStrawBed;
+
     public static void registerBlocks()
     {
         blockFrozenDeadWood = new GE_BlockFrozenDeadWood("GE_blockFrozenDeadWood", Material.ice);
@@ -47,5 +49,7 @@ public class GE_BlockRegistry
     	//blockDummyBlock = new GE_Block("GE_blockDummyBlock", Material.rock);
         //GameRegistry.registerBlock(blockDummyBlock, "GE_blockDummyBlock");
 
+        blockStrawBed = new GE_BlockStrawBed();
+        GameRegistry.registerBlock(blockStrawBed, "GE_blockStrawBed");
     }
 }

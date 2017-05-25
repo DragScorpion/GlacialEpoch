@@ -2,6 +2,7 @@ package de.teamhug.GlacialEpoch.Registry;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 import de.teamhug.GlacialEpoch.Items.GE_Item;
+import de.teamhug.GlacialEpoch.Items.GE_ItemStrawBed;
 import de.teamhug.GlacialEpoch.Items.Tools.GE_PrimitiveTool;
 import net.minecraft.item.Item;
 
@@ -76,7 +77,8 @@ public class GE_ItemRegistry
 	public static Item itemFormSwordBlade;
 	public static Item itemFormToolBinding;
 	public static Item itemFormToughBinding;
-	
+
+	public static Item itemStrawBed;
 	
 	//Dummy
 	public static Item itemDummyItem1;
@@ -310,7 +312,9 @@ public class GE_ItemRegistry
         itemFormToughBinding = new GE_Item("GE_itemFormToughBinding");
         itemFormToughBinding.setMaxStackSize(1);
         GameRegistry.registerItem(itemFormToughBinding, "GE_itemFormToughBinding");
-        
+
+        itemStrawBed = new GE_ItemStrawBed();
+        GameRegistry.registerItem(itemStrawBed, "GE_itemStrawBed");
         
     	//Dummy
         itemDummyItem1 = new GE_Item("GE_itemDummyItem1");
