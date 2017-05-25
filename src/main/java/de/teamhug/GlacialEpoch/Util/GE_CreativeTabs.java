@@ -25,7 +25,7 @@ public class GE_CreativeTabs
         @Override
         public Item getTabIconItem()
         {
-            return Item.getItemFromBlock(GE_BlockRegistry.blockDummyBlock);
+            return Item.getItemFromBlock(GE_BlockRegistry.blockFrozenDeadWood);
         }
     };
     

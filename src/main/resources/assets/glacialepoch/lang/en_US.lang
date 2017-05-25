@@ -13,11 +13,13 @@ item.GE_itemButchersKnife.name=Butchers Knife
 item.GE_itemPistonHead.name=Piston Head
 
 //--- Blocks
-tile.GE_blockDummyBlock.name=Dummy Block
-tile.GE_BlockButcherTable.name=Butcher Table
-tile.GE_blockDeadWoodFrozen.name=Frozen Dead Wood
+//tile.GE_BlockDummyBlock.name=Dummy Block
+tile.GE_blockButcherTable.name=Butcher Table
+tile.GE_blockFrozenDeadWood.name=Frozen Dead Wood
+tile.GE_blockBush_0.name=Frozen Dead Bush
 tile.GE_blockPistonBlock.name=Piston Block
-tile.GE_BlockClayFurnace.name=Clay Furnace Controller
+tile.GE_blockClayFurnace.name=Clay Furnace Controller
+tile.GE_blockCampFire.name=Campfire
 
 //--- Tabs
 itemGroup.GE_tabItems=GE Items

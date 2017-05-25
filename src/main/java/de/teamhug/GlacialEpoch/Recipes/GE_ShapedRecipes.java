@@ -13,28 +13,35 @@ public class GE_ShapedRecipes
     {
 
         GameRegistry.addRecipe(new ItemStack(GE_ItemButcherMod.itemHidesCutter),
-            /*Recipe*/      "  F",
+            /*Recipe*/
+            "  F",
                 "BF ",
                 "SB ",
-            /*Material*/    'F', Items.flint, 'B', Items.string, 'S', Items.stick);
+            /*Material*/
+            'F', Items.flint, 'B', Items.string, 'S', Items.stick);
 
         GameRegistry.addRecipe(new ItemStack(GE_ItemButcherMod.itemCuttingKnife),
-             /*Recipe*/      "D  ",
+             /*Recipe*/
+             "D  ",
                 " DB",
                 "  S",
-             /*Material*/    'D', Items.flint, 'B', Items.string, 'S', Items.stick);
+             /*Material*/
+             'D', Items.flint, 'B', Items.string, 'S', Items.stick);
 
         GameRegistry.addRecipe(new ItemStack(Items.leather),
-             /*Recipe*/      "DK ",
+             /*Recipe*/
+             "DK ",
                 "   ",
                 "   ",
-             /*Material*/    'D', GE_ItemButcherMod.itemCadaverCow, 'K', GE_ItemButcherMod.itemHidesCutter);
+             /*Material*/
+             'D', GE_ItemButcherMod.itemCadaverCow, 'K', GE_ItemButcherMod.itemHidesCutter);
 
         GameRegistry.addRecipe(new ItemStack(GE_ItemRegistry.itemPrimitiveTool),
             /*Recipe*/
                 "F ",
                 " S",
-			/*Material*/    'F', Items.flint, 'S', Items.stick);
+			/*Material*/
+			'F', Items.flint, 'S', Items.stick);
     }
 
     public static void registerBlockRecipes()
