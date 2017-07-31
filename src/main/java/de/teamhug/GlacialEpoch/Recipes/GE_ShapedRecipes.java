@@ -14,41 +14,41 @@ public class GE_ShapedRecipes
     {
         GameRegistry.addRecipe(new ItemStack(GE_ItemButcherMod.itemHidesCutter),
             /*Recipe*/
-            "  F",
-            "BF ",
-            "SB ",
+                "  F",
+                "BF ",
+                "SB ",
             /*Material*/
-            'F', Items.flint, 'B', Items.string, 'S', Items.stick);
+                'F', Items.flint, 'B', Items.string, 'S', Items.stick);
 
         GameRegistry.addRecipe(new ItemStack(GE_ItemButcherMod.itemCuttingKnife),
              /*Recipe*/
-             "D  ",
-             " DB",
-             "  S",
+                "D  ",
+                " DB",
+                "  S",
              /*Material*/
-             'D', Items.flint, 'B', Items.string, 'S', Items.stick);
+                'D', Items.flint, 'B', Items.string, 'S', Items.stick);
 
         GameRegistry.addRecipe(new ItemStack(Items.leather),
              /*Recipe*/
-             "DK ",
-             "   ",
-             "   ",
+                "DK ",
+                "   ",
+                "   ",
              /*Material*/
-             'D', GE_ItemButcherMod.itemCadaverCow, 'K', GE_ItemButcherMod.itemHidesCutter);
+                'D', GE_ItemButcherMod.itemCadaverCow, 'K', GE_ItemButcherMod.itemHidesCutter);
 
         GameRegistry.addRecipe(new ItemStack(GE_ItemRegistry.itemPrimitiveTool),
             /*Recipe*/
-            "F ",
-            " S",
+                "F ",
+                " S",
             /*Material*/
-            'F', Items.flint, 'S', Items.stick);
-      GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GE_ItemRegistry.itemStrawBed),
+                'F', Items.flint, 'S', Items.stick);
+        GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(GE_ItemRegistry.itemStrawBed),
             /*Recipe*/
-            "SSS",
-            "SSS",
-            "WWW",
+                "SSS",
+                "SSS",
+                "WWW",
             /*Material*/
-            'S', Items.wheat, 'W', "plankWood"));
+                'S', Items.wheat, 'W', "plankWood"));
     }
 
     public static void registerBlockRecipes()

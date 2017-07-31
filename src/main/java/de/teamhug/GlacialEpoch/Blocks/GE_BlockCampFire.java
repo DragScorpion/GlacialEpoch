@@ -1,11 +1,9 @@
 package de.teamhug.GlacialEpoch.Blocks;
 
 import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
-import cpw.mods.fml.relauncher.SideOnly;
 import de.teamhug.GlacialEpoch.GE_Main;
 import de.teamhug.GlacialEpoch.Registry.GE_GuiRegistry;
 import de.teamhug.GlacialEpoch.TileEntities.GE_TileEntityCampFire;
-import de.teamhug.GlacialEpoch.Util.GE_CreativeTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -18,15 +16,11 @@ import net.minecraft.world.World;
 
 public class GE_BlockCampFire extends BlockContainer {
 
-	public GE_BlockCampFire(String unlocalizedName, Material material)
+	public GE_BlockCampFire(Material material)
     {
         super(material);
-        this.setBlockName(unlocalizedName);
-        this.setBlockTextureName(GE_Main.MODID + ":" + unlocalizedName);
-        this.setCreativeTab(GE_CreativeTabs.tabGEBlocks);
         this.setHardness(2.0f);
 		this.setResistance(15.0f);
-		this.setHarvestLevel("axe", 1);
 		this.setStepSound(soundTypeWood);
 		this.setBlockBounds(0, 0, 0, 1, 0.5F, 1);
     }

@@ -2,7 +2,6 @@ package de.teamhug.GlacialEpoch.Items;
 
 import de.teamhug.GlacialEpoch.Blocks.GE_BlockStrawBed;
 import de.teamhug.GlacialEpoch.Registry.GE_BlockRegistry;
-import de.teamhug.GlacialEpoch.Util.GE_CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
@@ -13,12 +12,6 @@ import net.minecraft.world.World;
  */
 public class GE_ItemStrawBed extends GE_Item
 {
-
-    public GE_ItemStrawBed()
-    {
-        super("GE_itemStrawBed");
-        this.setCreativeTab(GE_CreativeTabs.tabGEBlocks);
-    }
 
     public boolean onItemUse(ItemStack p_77648_1_, EntityPlayer p_77648_2_, World p_77648_3_, int p_77648_4_, int p_77648_5_, int p_77648_6_, int p_77648_7_, float p_77648_8_, float p_77648_9_, float p_77648_10_)
     {

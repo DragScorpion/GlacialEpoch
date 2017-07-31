@@ -1,7 +1,5 @@
 package de.teamhug.GlacialEpoch.Blocks;
 
-import de.teamhug.GlacialEpoch.GE_Main;
-import de.teamhug.GlacialEpoch.Util.GE_CreativeTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -12,12 +10,9 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 public class GE_Block extends Block
 {
 
-    public GE_Block(String unlocalizedName, Material material)
+    public GE_Block(Material material)
     {
         super(material);
-        this.setBlockName(unlocalizedName);
-        this.setBlockTextureName(GE_Main.MODID + ":" + unlocalizedName);
-        this.setCreativeTab(GE_CreativeTabs.tabGEBlocks);
     }
 
     @Override

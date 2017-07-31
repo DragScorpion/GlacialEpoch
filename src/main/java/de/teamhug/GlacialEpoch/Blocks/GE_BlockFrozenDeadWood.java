@@ -1,7 +1,5 @@
 package de.teamhug.GlacialEpoch.Blocks;
 
-import de.teamhug.GlacialEpoch.GE_Main;
-import de.teamhug.GlacialEpoch.Util.GE_CreativeTabs;
 import net.minecraft.block.BlockRotatedPillar;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
@@ -14,12 +12,9 @@ public class GE_BlockFrozenDeadWood extends BlockRotatedPillar
 {
     private IIcon[] icons = new IIcon[2];
 
-    public GE_BlockFrozenDeadWood(String unlocalizedName, Material material)
+    public GE_BlockFrozenDeadWood(Material material)
     {
         super(material);
-        this.setBlockName(unlocalizedName);
-        this.setBlockTextureName(GE_Main.MODID + ":" + unlocalizedName);
-        this.setCreativeTab(GE_CreativeTabs.tabGEBlocks);
         this.setHardness(2.5f);
     }
 

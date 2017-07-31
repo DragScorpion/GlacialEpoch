@@ -1,6 +1,5 @@
 package de.teamhug.GlacialEpoch.Blocks;
 
-import de.teamhug.GlacialEpoch.GE_Main;
 import de.teamhug.GlacialEpoch.TileEntities.GE_TileEntityStrawBed;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockBed;
@@ -31,8 +30,6 @@ public class GE_BlockStrawBed extends BlockBed implements ITileEntityProvider
     public GE_BlockStrawBed()
     {
         super();
-        this.setBlockName("GE_blockStrawBed");
-        this.setBlockTextureName(GE_Main.MODID + ":GE_blockStrawBed");
         this.isBlockContainer = true;
     }
 

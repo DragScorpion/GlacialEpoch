@@ -17,7 +17,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "0.0.0-teamcity:buildnumber"
+version = "0.0.0-teamcity_buildnumber"
 group= "de.teamhug.glacialepoch" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "glacialepoch"
 
@@ -31,6 +31,10 @@ repositories {
     //    name = "OpenMods"
     //    url = "http://repo.openmods.info/artifactory/openmods"
     //}
+    ivy {
+        ivyPattern      'http://teamcity.henny022.de/guestAuth/repository/download/[module]/[revision]/teamcity-ivy.xml'
+        artifactPattern 'http://teamcity.henny022.de/guestAuth/repository/download/[module]/[revision]/[artifact](.[ext])'
+    }
 }
 
 dependencies {
@@ -44,7 +48,14 @@ dependencies {
     //compile 'com.googlecode.efficient-java-matrix-library:ejml:0.24' // adds ejml to the dev env
 
     //compile "openblocks:OpenBlocks-API:1.1"
-	
+
+    compile ( 'org:HennyLib_Build:22' ){
+        artifact {
+            name = 'hennylib-dev'
+            type = 'jar'
+        }
+    }
+
     // for more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html

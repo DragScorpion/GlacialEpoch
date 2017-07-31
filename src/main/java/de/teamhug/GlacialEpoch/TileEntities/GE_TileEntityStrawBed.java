@@ -1,5 +1,6 @@
 package de.teamhug.GlacialEpoch.TileEntities;
 
+import de.henny022.HennyLib.api.HennyLibRegistry;
 import net.minecraft.block.BlockBed;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
@@ -8,6 +9,7 @@ import net.minecraft.tileentity.TileEntity;
 /**
  * GlacialEpoch_TRY-StrawBed, Created by Henny on 25.05.2017.
  */
+@HennyLibRegistry.TileEntity
 public class GE_TileEntityStrawBed extends TileEntity
 {
     public int damage;

@@ -1,14 +1,11 @@
 package de.teamhug.GlacialEpoch.Recipes;
 
-import java.util.ArrayList;
-
 import de.teamhug.GlacialEpoch.Registry.GE_ItemButcherMod;
 import de.teamhug.GlacialEpoch.Util.GE_ButcherRecipe;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import scala.tools.ant.sabbus.Use;
+
+import java.util.ArrayList;
 
 public class GE_ButcherRecipes {
 	
@@ -21,7 +18,7 @@ public class GE_ButcherRecipes {
 		
 		tools.add(new ItemStack(GE_ItemButcherMod.itemHidesCutter));
 		tools.add(new ItemStack(GE_ItemButcherMod.itemCuttingKnife)); 
-		tools.add(new ItemStack(GE_ItemButcherMod.itemSlaughteringAx)); 
+		tools.add(new ItemStack(GE_ItemButcherMod.itemSlaughteringAxe));
 		tools.add(new ItemStack(Items.water_bucket));
 		
 		tools2.add(new ItemStack(GE_ItemButcherMod.itemButchersKnife));
@@ -30,12 +27,12 @@ public class GE_ButcherRecipes {
 		addRecipe(new GE_ButcherRecipe()
 				.setInput(new ItemStack(GE_ItemButcherMod.itemCadaverCow))
 				.setTools(tools)
-				.addOutput(new ItemStack(GE_ItemButcherMod.itemBovine_half, 2, 1))
-				.addOutput(new ItemStack(GE_ItemButcherMod.itemBovine_skin, 1, 1))
+				.addOutput(new ItemStack(GE_ItemButcherMod.itemBovineHalf, 2, 1))
+				.addOutput(new ItemStack(GE_ItemButcherMod.itemBovineSkin, 1, 1))
 				.addOutput(new ItemStack(GE_ItemButcherMod.itemCowHead, 1, 1))); 
 				
 		addRecipe(new GE_ButcherRecipe()
-				.setInput(new ItemStack(GE_ItemButcherMod.itemBovine_half))
+				.setInput(new ItemStack(GE_ItemButcherMod.itemBovineHalf))
 				.setTools(tools2)
 				.addOutput(new ItemStack(Items.beef, 6, 1)));	
 		
