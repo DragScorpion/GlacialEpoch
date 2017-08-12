@@ -5,10 +5,8 @@ import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import de.henny022.HennyLib.HennyLib;
 import de.henny022.HennyLib.api.HennyLibRegistry;
 import de.henny022.HennyLib.api.IMod;
-import de.henny022.HennyLib.api.ModRegisterer;
 import de.teamhug.GlacialEpoch.Blocks.GE_Block;
 import de.teamhug.GlacialEpoch.Items.GE_Item;
 import de.teamhug.GlacialEpoch.Proxy.GE_CommonProxy;
@@ -31,13 +29,6 @@ public class GE_Main implements IMod
 
     @SidedProxy(clientSide = "de.teamhug.GlacialEpoch.Proxy.GE_ClientProxy", serverSide = "de.teamhug.GlacialEpoch.Proxy.GE_ServerProxy")
     public static GE_CommonProxy proxy;
-
-    public static ModRegisterer registerer;
-
-    public GE_Main()
-    {
-        registerer = HennyLib.registerMod(this.getClass());
-    }
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)

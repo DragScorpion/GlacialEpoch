@@ -28,7 +28,7 @@ public class GE_BlockRegistry
     @HennyLibRegistry.Block(blockClass = GE_BlockPistonBlock.class, effectiveTool = "pickaxe", harvestLevel = 1)
     public static Block blockPistonBlock;
 
-    @HennyLibRegistry.Block(blockClass = GE_BlockStrawBed.class)
+    @HennyLibRegistry.Block(blockClass = GE_BlockStrawBed.class, creativeTab = "none")
     public static Block blockStrawBed;
 
 }
