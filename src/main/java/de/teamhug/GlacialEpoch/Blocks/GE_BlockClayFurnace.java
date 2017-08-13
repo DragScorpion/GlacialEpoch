@@ -4,7 +4,6 @@ import cpw.mods.fml.common.network.internal.FMLNetworkHandler;
 import de.teamhug.GlacialEpoch.GE_Main;
 import de.teamhug.GlacialEpoch.Registry.GE_GuiRegistry;
 import de.teamhug.GlacialEpoch.TileEntities.GE_TileEntityClayFurnace;
-import de.teamhug.GlacialEpoch.Util.GE_CreativeTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
@@ -21,15 +20,11 @@ public class GE_BlockClayFurnace extends BlockContainer {
 	
 	public IIcon[] icons = new IIcon[2];
 	
-	public GE_BlockClayFurnace(String unlocalizedName, Material material)
+	public GE_BlockClayFurnace(Material material)
     {
         super(material);
-        this.setBlockName(unlocalizedName);
-        this.setBlockTextureName(GE_Main.MODID + ":" + unlocalizedName);
-        this.setCreativeTab(GE_CreativeTabs.tabGEBlocks);
         this.setHardness(2.0f);
 		this.setResistance(15.0f);
-		this.setHarvestLevel("Pickaxe", 2);
 		this.setStepSound(soundTypeStone);
     }
 	

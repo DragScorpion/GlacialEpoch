@@ -3,16 +3,17 @@ package de.teamhug.GlacialEpoch.Proxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-import de.teamhug.GlacialEpoch.Registry.GE_RenderRegistry;
+import de.henny022.HennyLib.api.HennyLibRegistry;
+import de.teamhug.GlacialEpoch.GE_Main;
 
 /**
  * GlacialEpoch.git, Created by Henny on 03.03.2017.
  */
+@HennyLibRegistry.ClientProxy(modid = GE_Main.MODID)
 public class GE_ClientProxy extends GE_CommonProxy
 {
     public void preInit(FMLPreInitializationEvent event)
     {
-    	GE_RenderRegistry.registerRenderer();
         super.preInit(event);
     }
 
