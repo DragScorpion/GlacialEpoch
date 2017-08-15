@@ -49,11 +49,12 @@ dependencies {
 
     //compile "openblocks:OpenBlocks-API:1.1"
 
-    compile ( 'org:HennyLib_Build:29' ){
+    compile ( 'org:HennyLib_Build:.lastSuccessful' ){
         artifact {
             name = 'hennylib-dev'
             type = 'jar'
         }
+        changing = true
     }
 
     // for more info...

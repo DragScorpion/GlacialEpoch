@@ -7,17 +7,15 @@ import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import de.henny022.HennyLib.api.HennyLibRegistry;
 import de.henny022.HennyLib.api.IMod;
-import de.teamhug.GlacialEpoch.Blocks.GE_Block;
-import de.teamhug.GlacialEpoch.Items.GE_Item;
 import de.teamhug.GlacialEpoch.Proxy.GE_CommonProxy;
 
 /**
  * GlacialEpoch.git, Created by Henny on 03.03.2017.
  */
-@Mod(modid = GE_Main.MODID, version = GE_Main.VERSION, name = GE_Main.NAME, dependencies = "required-after:hennylib@[0.1-13,);")
+@Mod(modid = GE_Main.MODID, version = GE_Main.VERSION, name = GE_Main.NAME, dependencies = "required-after:hennylib@[0.1-29,);")
 @HennyLibRegistry(namePrefix = "GE_")
-@HennyLibRegistry.BlockRegistry(creativeTab = "tabGEBlocks", blockClass = GE_Block.class)
-@HennyLibRegistry.ItemRegistry(creativeTab = "tabGEItems", itemClass = GE_Item.class)
+@HennyLibRegistry.BlockRegistry(creativeTab = "tabGEBlocks")
+@HennyLibRegistry.ItemRegistry(creativeTab = "tabGEItems")
 public class GE_Main implements IMod
 {
     public static final String MODID = "glacialepoch";

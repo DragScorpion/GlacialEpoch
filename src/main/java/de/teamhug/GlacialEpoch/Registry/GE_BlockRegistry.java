@@ -12,7 +12,7 @@ public class GE_BlockRegistry
     @HennyLibRegistry.Block
     public static Block blockDummyBlock;
 
-    @HennyLibRegistry.Block(constructorArg = 0)
+    @HennyLibRegistry.Block(constructorArg = 0, creativeTab = "none")
     public static Block blockBush;
     @HennyLibRegistry.Block(material = "ice", blockClass = GE_BlockFrozenDeadWood.class)
     @HennyLibRegistry.Fuel(burnTime = 200)
